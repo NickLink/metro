@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_metro" />
+
+    <include
+        android:id="@+id/subheader_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/subheader_registration_fiz" />
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/metro_gray"
+        android:fillViewport="true"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp" >
+
+        <LinearLayout
+            android:id="@+id/mainLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+            
+            <TextView
+                android:id="@+id/reg_regError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="22dp"
+                android:text="@string/reg_regError"
+                android:textColor="@color/metro_red"
+                android:textSize="24sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/reg_regBirchDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/reg_regBirchDate"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:weightSum="7" >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+                    
+                    <Spinner
+                        android:id="@+id/spinnerDay"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="3" >
+
+                    
+                    <Spinner
+                        android:id="@+id/spinnerMonth"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="2" >
+
+                    
+                    <Spinner
+                        android:id="@+id/spinnerYear"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/reg_allFieldsMust"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/reg_allFieldsMust"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/reg_regAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/reg_regAgreement"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/reg_regGetRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="left"
+                android:layout_marginTop="18dp"
+                android:paddingLeft="55dp"
+        		android:paddingRight="55dp"
+                android:background="@drawable/bg_btn_yellow"
+                android:text="@string/reg_regGetRegister"
+                android:textAllCaps="true"
+                android:textColor="@color/metro_black"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

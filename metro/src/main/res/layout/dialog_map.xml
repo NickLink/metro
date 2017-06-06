@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/metro_gray"
+    android:orientation="vertical"
+    android:paddingBottom="26dp" >
+
+    <RelativeLayout
+        android:id="@+id/headerRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/metro_light_gray" >
+
+        <ImageButton
+            android:id="@+id/iconCloseImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:src="@drawable/btn_close_normal" />
+
+        <TextView
+            android:id="@+id/subTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/metro_black"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/store_pin_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerRelativeLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/store_pin_blue" />
+
+    <TextView
+        android:id="@+id/titleShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerRelativeLayout"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_toRightOf="@+id/store_pin_blue"
+        android:text="titleShop"
+        android:textColor="@color/metro_navy"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/addressShop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleShop"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/store_pin_blue"
+        android:text="addressShop"
+        android:textColor="@color/metro_black_text"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/traceButton"
+        android:layout_width="180dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/addressShop"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_btn_yellow"
+        android:text="@string/map_traceRoute"
+        android:textColor="@color/metro_black_text"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/metro_gray" >
+
+    <LinearLayout
+        android:id="@+id/content1LinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/confirmTextViewThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="63dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="0.9"
+            android:text="@string/send_pass_by_number"
+            android:textColor="@color/metro_black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="119dp"
+            android:layout_marginRight="119dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_line" />
+
+            <TextView
+                android:id="@+id/cardOwnerPhoneText"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="13dp"
+                android:gravity="center"
+                android:singleLine="true"
+                android:background="@drawable/bg_btn_white"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="+(380)-XXX-XX-XX"
+                android:textSize="16sp"
+                android:textColor="@color/metro_dark_gray" />
+
+        <Button
+            android:id="@+id/login_okBig"
+            android:layout_width="185dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/bg_btn_yellow"
+            android:text="@string/login_okBig"
+            android:textAllCaps="true"
+            android:textColor="@color/metro_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/error_in_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="65dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="0.9"
+            android:text="@string/error_in_phone"
+            android:textColor="@color/metro_black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/on_previous_screen"
+            android:layout_width="208dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="34dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/bg_btn_yellow"
+            android:text="@string/on_previous_screen"
+            android:textAllCaps="true"
+            android:textColor="@color/metro_black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+</RelativeLayout>

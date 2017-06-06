@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/metro_gray"
+    android:orientation="vertical"
+    android:paddingBottom="26dp" >
+
+    <RelativeLayout
+        android:id="@+id/headerRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/metro_light_gray" >
+
+        <TextView
+            android:id="@+id/subTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dp"
+            android:text="@string/dialog_TempCardTitle"
+            android:textColor="@color/metro_black"
+            android:textSize="28sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headerRelativeLayout"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/dialog_TempCardExpired"
+        android:textColor="@color/metro_black_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/buttonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textMessage"
+        android:textColor="@color/metro_black_text"
+        android:textSize="16sp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/dialog_TempCardButton" />
+
+    <Button
+        android:id="@+id/expiredButton"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@+id/buttonTextView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_btn_green_empty"
+        android:text="@string/dialog_TempCardLeft"
+        android:textColor="@color/metro_green"
+        android:paddingLeft="55dp"
+        android:paddingRight="55dp"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_metro" />
+
+    <include
+        android:id="@+id/header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/subheader_passw" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/metro_gray"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <LinearLayout
+            android:id="@+id/mainLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/restore_PasswText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_marginTop="55dp"
+                android:gravity="center_horizontal"
+                android:text="@string/login_restorepasswordError"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="150dp"
+                android:layout_marginRight="150dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_line" />
+
+            <EditText
+                android:id="@+id/passw_phone_enter"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/login_greyline"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/bg_btn_white"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/login_phoneeditHint"
+                android:inputType="phone"
+                android:maxLength="14"
+                android:textSize="20sp" >
+            </EditText>
+
+            <Button
+                android:id="@+id/passw_refeshButton"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@+id/passw_phone_enter"
+                android:layout_gravity="center"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_btn_yellow"
+                android:paddingLeft="55dp"
+                android:paddingRight="55dp"
+                android:text="@string/login_refreshpasswordBig"
+                android:textAllCaps="true"
+                android:textColorLink="@color/metro_black"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottomLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/questionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:gravity="center"
+                android:lineSpacingMultiplier="0.9"
+                android:text="@string/login_havequestionaboutautorization"
+                android:textColor="@color/metro_black"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/questionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="38dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_btn_yellow"
+                android:paddingLeft="55dp"
+                android:paddingRight="55dp"
+                android:text="@string/login_sendquetion"
+                android:textAllCaps="true"
+                android:textColor="@color/metro_black"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

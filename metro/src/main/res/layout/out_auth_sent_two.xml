@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    
+      <include
+	    android:id="@+id/header_layout"  
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"			    
+	    layout="@layout/header_metro" />
+
+      <include
+	    android:id="@+id/header_layout"  
+	    android:layout_width="fill_parent"
+	    android:layout_height="45dp"			    
+	    layout="@layout/subheader_auth" />
+
+      <ScrollView
+          android:id="@+id/scrollView1"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/metro_gray"
+          android:fillViewport="true" >
+
+          <LinearLayout
+        android:id="@+id/content1LinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/confirmTextViewTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="35dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="0.9"
+            android:text="@string/login_phoneconfirm"
+            android:textColor="@color/metro_black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="118dp"
+            android:layout_marginRight="118dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_line" />
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="28dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="5dp"
+            android:background="@drawable/bg_btn_white_empty"
+            android:orientation="horizontal" >
+            
+            <LinearLayout
+			    android:focusable="true" 
+			    android:focusableInTouchMode="true"
+			    android:layout_width="0px" 
+			    android:layout_height="0px"/>
+
+            <EditText
+                android:id="@+id/cardOwnerPhoneEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:hint="@string/login_phoneeditHint"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:maxLength="12"
+                android:textColorHint="#aabbc9"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/phoneEditButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right|center_vertical"
+                android:background="@null"
+                android:padding="5dp"
+                android:src="@drawable/btn_edit_normal"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:id="@+id/phoneDontSaveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:padding="5dp"
+                android:src="@drawable/btn_dont_save_normal"
+                android:visibility="gone" />
+            
+            <ImageButton
+                android:id="@+id/phoneSaveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/phoneDontSaveButton"
+                android:background="@null"
+                android:padding="5dp"
+                android:src="@drawable/btn_save_normal"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/yesMyPhoneTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="9dp"
+            android:text="@string/login_phoneconfirmyes"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/confirmTwoButton"
+            android:layout_width="170dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="34dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_btn_yellow"
+            android:text="@string/login_confirmBig"
+            android:textAllCaps="true"
+            android:textColor="@color/metro_black"
+            android:textSize="16sp" />
+    </LinearLayout>
+      </ScrollView>
+      
+</LinearLayout>

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!--<include-->
+        <!--android:id="@+id/subHeaderLayout"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:visibility="gone"-->
+        <!--layout="@layout/subheader_main" />-->
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomMenuLayout"
+        android:layout_alignParentTop="true"
+        android:background="@color/metro_gray"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp" >
+        <!--android:layout_below="@+id/subHeaderLayout"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                android:id="@+id/getYourCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_TempCardExpiredBarCode"
+                android:textSize="24sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/barCodeButton"
+                android:layout_width="match_parent"
+                android:layout_height="460dp"
+                android:background="@drawable/bg_btn_white" >
+
+                <ImageView
+                    android:id="@+id/barCodeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="25dp" />
+
+                <TextView
+                    android:id="@+id/barCodeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/bg_btn_white"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/add_RegularCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_btn_yellow_selector"
+                android:paddingLeft="55dp"
+                android:paddingRight="55dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/add_RegularCard"
+                android:textAllCaps="true"
+                android:textColor="@color/metro_black"
+                android:textSize="24sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/cardOwnerNameEditTextRL"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_btn_white"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="6dp" >
+
+                <View
+                    android:id="@+id/cardOwnerNameLine"
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/metro_yellow" />
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="0px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+                <EditText
+                    android:id="@+id/cardOwnerNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="80dp"
+                    android:background="@null"
+                    android:maxLength="40"
+                    android:singleLine="true"
+                    android:textColorHint="#aabbc9"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/nameEditButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@null"
+                    android:src="@drawable/btn_edit_normal"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/nameDontSaveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:src="@drawable/btn_dont_save_normal"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/nameSaveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/nameDontSaveButton"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:src="@drawable/btn_save_normal"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_white"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="6dp" >
+
+                <View
+                    android:id="@+id/cardOwnerPhoneLine"
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/metro_yellow" />
+
+                <TextView
+                    android:id="@+id/cardOwnerPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginRight="50dp"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cardOwnerEmailEditTextRL"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_white"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="6dp" >
+
+                <View
+                    android:id="@+id/cardOwnerEmailLine"
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/metro_yellow" />
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="0px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+                <EditText
+                    android:id="@+id/cardOwnerEmailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                android:layout_marginRight="80dp"
+                    android:background="@null"
+                android:maxLength="40"
+                    android:singleLine="true"
+                    android:textColorHint="#aabbc9"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/emailEditButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@null"
+                    android:src="@drawable/btn_edit_normal"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/emailDontSaveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:src="@drawable/btn_dont_save_normal"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/emailSaveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/emailDontSaveButton"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:src="@drawable/btn_save_normal"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/cardOwnerFopEditTextRL"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_btn_white"
+                android:orientation="horizontal"
+                android:paddingLeft="13dp"
+                android:paddingRight="6dp"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/cardOwnerFopLine"
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/metro_yellow" />
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="0px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+                <EditText
+                    android:id="@+id/cardOwnerFopEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                android:layout_marginRight="80dp"
+                    android:background="@null"
+                android:maxLength="40"
+                    android:singleLine="true"
+                    android:textColorHint="#aabbc9"
+                    android:textSize="18sp" />
+
+                <ImageButton
+                    android:id="@+id/fopEditButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:background="@null"
+                    android:src="@drawable/btn_edit_normal"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/fopDontSaveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:src="@drawable/btn_dont_save_normal"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/fopSaveButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/fopDontSaveButton"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:src="@drawable/btn_save_normal"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="18dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <RelativeLayout
+                    android:layout_width="360dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true" >
+
+                    <TextView
+                        android:id="@+id/buttonRegion"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="left|center_vertical"
+                        android:textColor="@color/metro_black_text"
+                        android:textSize="20sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerRegion"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/slide_switch"
+                    android:layout_width="82dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_navy_border_height_30"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp" >
+
+                    <Button
+                        android:id="@+id/switch_UA"
+                        android:layout_width="36dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:text="UA"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp" />
+
+                    <Button
+                        android:id="@+id/switch_RU"
+                        android:layout_width="36dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:text="RU"
+                        android:textColor="@color/metro_black"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/appRules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="27dp"
+                    android:text="@string/app_Rules"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/app_Exit"
+                    android:layout_width="130dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_btn_red_empty"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/app_Exit"
+                    android:textColor="@color/metro_red"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/bottomMenuLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottom_menu" />
+
+</RelativeLayout>

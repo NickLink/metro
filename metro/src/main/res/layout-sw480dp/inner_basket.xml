@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <include
+	    android:id="@+id/subHeaderLayout"  
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"			    
+	    layout="@layout/subheader_main" />
+     
+     <RelativeLayout
+         android:id="@+id/emptyBasketLayout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@+id/subHeaderLayout"
+         android:background="@color/metro_gray"
+         android:visibility="gone" >
+
+         <TextView
+             android:id="@+id/emptyBasketTextView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_above="@+id/emptyBasketImageView"
+             android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+             android:gravity="center_horizontal"
+             android:paddingBottom="10dp"
+             android:paddingLeft="50dp"
+             android:paddingRight="50dp"
+             android:paddingTop="20dp"
+             android:text="@string/empty_text"
+             android:textAllCaps="true"
+             android:textSize="28sp" />
+
+         <ImageView
+             android:id="@+id/emptyBasketImageView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:layout_gravity="center"
+             android:src="@drawable/empty_cart" />
+
+         <Button
+             android:id="@+id/addGdsButton"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:layout_centerHorizontal="true"
+             android:layout_marginBottom="80dp"
+             android:background="@drawable/bg_btn_yellow"
+             android:paddingLeft="30dp"
+             android:paddingRight="30dp"
+             android:text="@string/add_first_gds"
+             android:textAllCaps="true"
+             android:textColorLink="@color/metro_black"
+             android:textSize="20sp"
+             android:textStyle="bold" />
+
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:id="@+id/mainLayout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@+id/subHeaderLayout"
+         android:layout_marginBottom="60dp"
+         android:visibility="visible" >
+	     
+	     <LinearLayout
+	         android:id="@+id/totalLayout"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"	         
+	         android:background="@color/metro_black"
+	         android:orientation="horizontal" 
+	         android:padding="10dp">
+		
+		        <TextView
+		            android:id="@+id/label1TextView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginRight="5dp"
+		            android:text="@string/added"
+		            android:textColor="@android:color/white"
+		            android:textSize="20sp" />
+	
+		        <TextView
+		            android:id="@+id/countTextView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginRight="5dp"
+		            android:textColor="@color/metro_yellow"
+		            android:textSize="20sp" />
+		        
+		        <TextView
+		            android:id="@+id/label2TextView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginRight="5dp"
+		            android:textColor="@android:color/white"
+		            android:textSize="20sp" 
+		            android:text="@string/on_sum"/>
+		        <TextView
+		            android:id="@+id/sumUahTextView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginRight="3dp"
+		            android:textColor="@color/metro_yellow"
+		            android:textSize="20sp"/>
+		        <TextView
+		            android:id="@+id/sumCoinsTextView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginRight="3dp"
+		            android:layout_marginTop="-5dp"
+		            android:textColor="@color/metro_yellow"
+		            android:textSize="12sp"/>
+		         <TextView
+		            android:id="@+id/sumCurencyTextView"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textColor="@color/metro_yellow"
+		            android:textSize="20sp"
+		            android:text="@string/uah" />
+		
+		    </LinearLayout>
+	
+	     <ImageView
+	         android:id="@+id/arrowDownImageView"
+	         android:layout_width="wrap_content"
+	         android:layout_height="wrap_content"
+	         android:layout_alignTop="@+id/totalLayout"
+	         android:layout_marginLeft="20dp"
+	         android:src="@drawable/arrow_down" />
+	    
+	    <ListView
+	        android:id="@+id/backetGdsListView"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_alignParentBottom="true"
+	        android:layout_below="@+id/totalLayout"
+	        android:background="@color/metro_gray"
+	        android:descendantFocusability="blocksDescendants" 
+	        android:divider="@color/metro_gray"
+	        android:dividerHeight="9dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="9dp"
+	        android:paddingTop="5dp" >
+	
+	    </ListView>
+    </RelativeLayout>
+    
+    <include
+        android:id="@+id/bottomMenuLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottom_menu" />
+
+</RelativeLayout>

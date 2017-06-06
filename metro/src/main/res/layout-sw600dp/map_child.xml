@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp"
+    android:background="#FFFFFF" >
+
+    <ImageView
+        android:id="@+id/store_pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="32dp"
+        android:src="@drawable/store_pin_blue" />
+	  
+	  <TextView
+	      android:id="@+id/titleShop"
+	      android:layout_width="match_parent"
+	      android:layout_height="wrap_content"
+	      android:layout_marginLeft="10dp"
+	      android:layout_marginTop="15dp"
+	      android:layout_toRightOf="@+id/store_pin"
+	      android:gravity="center_vertical"
+	      android:singleLine="true"
+	      android:text="Shop Title"
+	      android:textColor="@color/metro_navy"
+	      android:textSize="28sp" />
+
+	  <TextView
+	      android:id="@+id/addressShop"
+	      android:layout_width="wrap_content"
+	      android:layout_height="wrap_content"
+	      android:layout_below="@+id/titleShop"
+	      android:layout_marginBottom="10dp"
+	      android:layout_marginLeft="10dp"
+	      android:layout_marginTop="1dp"
+	      android:layout_toRightOf="@+id/store_pin"
+	      android:singleLine="true"
+	      android:text="Shop address"
+	      android:textColor="@color/metro_black"
+	      android:textSize="22sp" />
+
+	  <View
+	      android:id="@+id/line_divider"
+	      android:layout_width="wrap_content"
+	      android:layout_height="2dp"
+	      android:layout_below="@+id/addressShop"
+	      android:background="@color/metro_gray" />
+	  
+</RelativeLayout>

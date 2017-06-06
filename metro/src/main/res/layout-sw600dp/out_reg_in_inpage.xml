@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/metro_light_gray" >
+
+    <TextView
+        android:id="@+id/login_enterinappTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:paddingBottom="14dp"
+        android:paddingTop="14dp"
+        android:text="@string/login_enterinappTitle"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/metro_gray"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp" >
+
+        <TextView
+            android:id="@+id/login_datahasbeensent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="27dp"
+            android:gravity="center_horizontal"
+            android:lineSpacingMultiplier="0.9"
+            android:text="@string/login_datahasbeensent"
+            android:textSize="24sp" />
+
+        <View
+            android:id="@+id/login_greyline"
+            android:layout_width="wrap_content"
+            android:layout_height="4dp"
+            android:layout_below="@+id/login_datahasbeensent"
+            android:layout_marginLeft="180dp"
+            android:layout_marginRight="180dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/bg_line" />
+
+       <EditText
+           android:id="@+id/login_phone_enter"
+           android:layout_width="match_parent"
+           android:layout_height="66dp"
+           android:layout_below="@+id/login_greyline"
+           android:layout_centerHorizontal="true"
+           android:layout_marginLeft="18dp"
+           android:layout_marginRight="18dp"
+           android:layout_marginTop="28dp"
+           android:background="@drawable/bg_btn_white"
+           android:ems="10"
+           android:gravity="center"
+           android:hint="@string/login_phoneeditHint"
+           android:inputType="phone"
+           android:maxLength="12"
+           android:textSize="24sp" >
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/login_password_enter"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_below="@+id/login_phone_enter"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_btn_white"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/login_passwordeditHint"
+            android:inputType="textPassword"
+            android:textSize="24sp" />
+        
+        <Button
+            android:id="@+id/login_enterButton"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/login_password_enter"
+            android:layout_gravity="center"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="150dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_btn_yellow"
+            android:text="@string/login_cominBig"
+            android:textAllCaps="true"
+            android:textColorLink="@color/metro_black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/login_forgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_enterButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:text="@string/login_passwordforgoten"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

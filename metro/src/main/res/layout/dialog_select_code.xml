@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/metro_gray"
+    android:orientation="vertical"
+    android:paddingBottom="26dp" >
+  
+	    <RelativeLayout
+	        android:id="@+id/headerRelativeLayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="45dp"
+	        android:background="@color/metro_light_gray" >
+	
+	      <ImageButton
+	          android:id="@+id/iconCloseImageButton"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:layout_alignParentRight="true"
+	          android:layout_centerVertical="true"
+	          android:layout_marginRight="10dp"
+	          android:background="@null"
+	          android:src="@drawable/btn_close_normal"
+	          android:visibility="gone" />
+	
+	      <TextView
+	          android:id="@+id/subTitleTextView"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:layout_alignParentLeft="true"
+	          android:layout_centerVertical="true"
+	          android:layout_marginLeft="10dp"
+	          android:textColor="@color/metro_black"
+	          android:textSize="20sp" />
+	
+	  	</RelativeLayout>
+	
+	    <TextView
+	        android:id="@+id/messageTextView"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/headerRelativeLayout"
+	        android:background="@color/metro_gray"
+	        android:paddingBottom="8dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:paddingTop="13dp" />
+
+<!-- 	    <TextView -->
+<!-- 	        android:id="@+id/show_bar_code" -->
+<!-- 	        android:layout_width="wrap_content" -->
+<!-- 	        android:layout_height="wrap_content" -->
+<!-- 	        android:layout_below="@+id/messageTextView" -->
+<!-- 	        android:paddingBottom="8dp" -->
+<!-- 	        android:paddingLeft="10dp" -->
+<!-- 	        android:paddingRight="10dp" -->
+<!-- 	        android:paddingTop="5dp"  -->
+<!-- 	        android:text="@string/show_bar_code" /> -->
+
+	    <LinearLayout
+	        android:id="@+id/selectionLL"
+	        android:layout_width="fill_parent"
+	        android:layout_height="31dp"
+	        android:layout_below="@+id/messageTextView"
+	        android:layout_marginTop="24dp"
+	        android:orientation="horizontal"
+	        android:paddingLeft="15dp"
+	        android:paddingRight="15dp"
+	        android:weightSum="5" >
+
+	        <Button
+	            android:id="@+id/buttonLeft"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_marginRight="16dp"
+	            android:layout_weight="2"
+	            android:background="@drawable/bg_navy_border"
+	            android:text="Button"
+	            android:textSize="14sp" />
+
+	        <Button
+	            android:id="@+id/buttonRight"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="3"
+	            android:background="@drawable/bg_btn_green_empty"
+	            android:text="Button"
+	            android:textSize="14sp" />
+
+	    </LinearLayout>
+
+</RelativeLayout>
+

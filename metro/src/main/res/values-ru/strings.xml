@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- SharedPreferences part -->
+	<string name="app_PREFNAME">MetroApp</string>
+	<string name="app_TOKEN">app_TOKEN</string>	
+	<string name="app_WALKPAGES">app_WALKPAGES</string>
+	<string name="app_TEMP_FIRSTLOGIN">app_TEMP_FIRSTLOGIN</string>
+	
+	<!-- SharedPreferences part -->
+	
+    <string name="app_name">METRO</string>  
+    
+    <string name="login_ihavecard">У меня уже есть карточка</string>
+    <string name="login_iwouldhavecard">Я хочу иметь карточку</string>
+    <string name="login_createprofile">Создать профиль</string>
+    <string name="login_createcard">Получить карточку</string>
+    
+	<string name="login_registrationButton">Регистрация</string>
+	<string name="login_cominButton">Войти</string>    
+	
+	<string name="login_scancodeBig">ОТСКАНИРОВАТЬ КОД</string>
+	<string name="login_confirmBig">ПОДТВЕРДИТЬ</string>
+	<string name="login_cominBig">ВОЙТИ</string>
+	<string name="login_sendquestionBig">ОТПРАВИТЬ ВОПРОС</string>
+	<string name="login_getpasswordBig">ПОЛУЧИТЬ ПАРОЛЬ</string>
+	<string name="login_refreshpasswordBig">ОБНОВИТЬ ПАРОЛЬ</string>
+	<string name="login_okBig">ХОРОШО</string>
+	
+	<string name="login_scancodetitle">Ви можете отсканировать код Вашей карточки с помощью камеры телефона</string>
+	<string name="login_inputcodetitle">Введите номер Вашей карточки для успешной авторизации в приложении</string>
+	<string name="login_inputcodehint">Введите номер Вашей карточки</string>
+	<string name="login_cardnotexisttitle">Такой номер карточки не существует. Возможно, Вы неверно указали номер.
+	    Попробуйте, пожалуйста, ещё раз.</string>
+	<string name="login_cardnotexisthint">Введите номер ещё раз</string>
+	<string name="login_havequestionaboutautorization">Есть вопросы касательно авторизации? Представители нашего контактного центра Вам помогут.</string>
+	<string name="login_sendquetion">Отправить вопрос</string>
+	<string name="inner_sendquetion">Мы с радостью ответим на любой Ваш вопрос</string>
+	
+	<string name="login_cardalreadyregistered">На указанный номер карточки уже зарегистрирован профиль пользователя. Пожалуйста, войдите в приложение.</string>
+	
+	<string name="login_scancodeButton">Сканировать код</string>
+	<string name="login_inputcodeButton">Ввести вручную</string>
+	
+	<string name="login_authorization">Авторизация</string>
+	
+	<string name="login_cardautorized">Мы нашли данные про Вашу карточку. Подтвердите, пожалуйста, корректность информации.</string>
+	<string name="login_phoneconfirm">Проверьте, пожалуйста, Ваш номер телефона для создания профиля и получения пароля.</string>
+	<string name="login_phoneconfirmyes">Да, это мой номер</string>
+	
+	<string name="question_texthint">Текст Вашего вопроса</string>
+	<string name="question_emailhint">Электронный адрес</string>
+	<string name="question_phonehint">Номер Вашего телефона </string>
+	<string name="question_allfieldstext">Все поля обязательны для заполнения</string>
+	<string name="question_send">Отправить</string>
+	<string name="question_sendthanks">Благодарим!</string>
+	<string name="question_sendthankstext">Мы благодарны за Ваш вопрос! Наши сотрудники позвонят Вам или предоставят ответ с помощью электронной почты.</string>
+	<string name="question_errorMessage">Сообщение не может быть пустым</string>    
+	<string name="question_errorEmail">Неправильно введён e-mail адрес</string>
+	<string name="question_errorPhone">Неправильно введён номер телефона</string>
+	    
+	<string name="login_datahasbeensent">Данные для входа в приложение были отправлены на указанный Вами во время регистрации номер мобильного телефона</string>
+	    
+	<string name="login_enterinappTitle">Вход в приложение</string>
+	<string name="login_passwordforgoten"><u>Забыли пароль?</u></string>
+	<string name="login_enterinappError">Неправильно указан номер телефона или пароль. Пожалуйста, попробуйте, ещё раз.</string>
+	<string name="login_restorepasswordTitle">Восстановление пароля</string>
+	<string name="login_restorepasswordtext">Пожалуйста, введите номер телефона для восстановления пароля</string>
+	<string name="login_restorepasswordError">Данные про пользователя не найдено. Убедитесь, что Вы правильно указали номер мобильного телефона.</string>
+	<string name="login_passwordhasbeensent">Пароль успешно отправлено на указанный Вами номер мобильного телефона.</string>
+	
+	<string name="login_phoneeditHint">380 (__)_______</string>
+	<string name="login_emaileditHint">your@email.com</string>
+	<string name="login_passwordeditHint">Пароль</string>
+	
+	<string name="preloader_dataString">Данные загружаются.</string>
+	<string name="preloader_waitString">Подождите, пожалуйста.</string>
+	
+	<!-- registration part -->
+	<string name="reg_registration">Регистрация</string>
+	<string name="reg_registrationFiz">Регистрация физического лица</string>
+	<string name="reg_registrationYur">Регистрация юридического лица</string>
+	<string name="reg_iRegisterAs">Я регистрируюсь как:</string>
+	<string name="reg_FizOsoba">ФИЗИЧЕСКОЕ ЛИЦО</string>
+	<string name="reg_UrOsobaSPD">ЮРИДИЧЕСКОЕ ЛИЦО/СПД</string>
+	<string name="reg_regPrizvische">Фамилия</string>
+	<string name="reg_regName">Имя</string>
+	<string name="reg_regPobatkovi">Отчество</string>
+	<string name="reg_regMobPhone">Мобильный телефон</string>
+	<string name="reg_regEmail">Электронный адрес</string>	
+	<string name="reg_TcGetCard">Выберите ближайший к Вам ТЦ METRO</string>
+	<string name="reg_TcGetCardPrompt">Выберите, пожалуйста</string>
+	<string name="reg_allFieldsMust">Все поля обязательны для заполнения</string>
+	<string name="reg_regDali">Дальше</string>
+	<string name="reg_regError">Пожалуйста, внесите корректные данные!</string>
+	
+	<string name="reg_regPosada">Должность</string>
+	<string name="reg_regCompanyName">Название компании</string>
+	<string name="reg_regBirchDate">Дата рождения</string>
+	<string name="reg_regGetRegister">ЗАРЕГИСТРИРОВАТЬСЯ</string>
+	<string name="reg_regDateHint">Число</string>
+	<string name="reg_regMonthHint">Месяц</string>
+	<string name="reg_regYearHint">Год</string>
+	<string name="reg_regDateError">Извините, но Вы ввели несуществующую дату</string>
+	<string name="reg_regAgreement">Регистрируясь, Вы соглашаетесь с 
+	    <a href="http://promo.metro.ua/Content/CmsFile/ua/pdf__umovi-pokupki-v-optovih-torgovih-centrah.pdf">Правилами оформления карточки клиента</a>, 
+	    <a href="http://promo.metro.ua/Content/CmsFile/ua/pdf__METRO_Bonus_Loyalty_Program_Terms_and_Conditions.pdf">Правилами участия в программе лояльности «METRO Бонус» и соглашением про конфиденциальность информации</a>.</string>
+	
+	
+	<string name="reg_regCompanySphere">Сфера деятельности компании</string>
+	<string name="reg_regCompanyNapryam">Направление деятельности компании</string>
+	<string name="reg_regEDRPOU">ЕГРПОУ/ИНН</string>
+	<string name="reg_regCONTINUE">ПРОДОЛЖИТЬ</string>
+	
+	<string name="reg_regOneThree">1/3</string>
+	<string name="reg_regTwoThree">2/3</string>
+	<string name="reg_regThreeThree">3/3</string>
+	
+	<string name="reg_yurAddCardOwners">Добавить владельцев карточек</string>
+	
+	<string name="reg_yurCardOwner1">Владелец №1</string>
+	<string name="reg_yurCardOwner2">Владелец №2</string>
+	<string name="reg_yurCardOwner3">Владелец №3</string>
+	<string name="reg_yurCardOwner4">Владелец №4</string>
+	<string name="reg_yurCardOpen">РАЗВЕРНУТЬ</string>
+	<string name="reg_yurCardClose">СВЕРНУТЬ</string>
+	<string name="reg_yurCardOwnerDelete">Удалить владельца</string>
+	
+	<string name="reg_CardOwner1_notComplete">Данные владельца №1 не заполнены!</string>
+	<string name="reg_CardOwner2_notComplete">Данные владельца №2 не заполнены!</string>
+	<string name="reg_CardOwner3_notComplete">Данные владельца №3 не заполнены!</string>
+	<string name="reg_CardOwner4_notComplete">Данные владельца №4 не заполнены!</string>
+	
+	<string name="reg_yurGetProposal1">Я хочу получать акционные предложения на адрес компании, который был указан ранее</string>
+	<string name="reg_yurGetProposal2">Указать другой адрес</string>
+	<string name="reg_yurRegion">Область</string>
+	<string name="reg_yurCity">Город/населённый пункт</string>
+	<string name="reg_yurStreetType">Тип улицы</string>
+	<string name="reg_yurStreet">Название улицы</string>
+	<string name="reg_yurHouse">Дом</string>
+	<string name="reg_yurFlat">Номер квартиры/офиса</string>
+	<string name="reg_yurIndex">Почтовый индекс</string>
+	
+	
+	<string name="reg_yurGetProposal3">Я хочу получать акционные предложения на мой e-mail, как владельца компании</string>
+	<string name="reg_yurGetProposal4">Указать другой e-mail</string>
+	<string name="reg_yurEmailAddress">Электронный адрес</string>
+	<string name="reg_yurGetGoldCard">В случае получения статуса "Золотой/Платиновый" клиент хочу получать бонусы в виде прямой скидки</string>
+	
+	
+	
+	<string name="login_comin">Войти</string>
+	
+	
+	<string name="splashpage1_text1">Здесь Вы можете найти все акционный предложения</string>
+	<string name="splashpage1_text2">Пользоваться карточкой METRO в магазине</string>
+	<string name="splashpage1_text3">Проложить маршрут до ближайшего магазина</string>
+	<string name="splashpage1_text4">Сохранить список желаемых покупок и посчитать их общую стоимость</string>
+	<string name="splashpage1_text5">ЛИСТАЙТЕ ДАЛЬШЕ</string>
+	
+	<string name="splashpage2_text1">НАПИШИТЕ\nОТЗЫВ</string>
+	<string name="splashpage2_text2">СФОРМИРУЙТЕ СОБСТВЕННЫЙ\nСПИСОК ПОКУПОК</string>
+	<string name="splashpage2_text3">ВАША\nКАРТОЧКА\nMETRO</string>
+	<string name="splashpage2_text4">УЗНАЙТЕ ПРО ВСЕ\nТОВАРЫ СО СКИДКАМИ</string>
+	<string name="splashpage2_text5">ПРОЛОЖИТЕ МАРШРУТ\nДО БЛИЖАЙШЕГО\nМАГАЗИНА</string>
+	<string name="splashpage2_button">ДАЛЕЕ</string>
+	
+	
+	<!-- bottom_menu_btn  -->
+	<string name="my_kard">Моя карточка</string>
+	<string name="discount_week">Акции недели</string>
+	<string name="map_shops">Карта магазинов</string>
+	
+	<!--inner_main: popular_products -->
+	<string name="add_to_list">Добавить в список</string>
+	<string name="uah">грн</string>
+	
+	<!-- hardware & connection errors -->
+	<string name="Error_server_not_responding">Ошибка получения данных, попробуйте, пожалуйста, позже</string>
+	<string name="Error_card_numberIncorrect">Неправильно введён номер карточки!</string>
+	<string name="Error_enteredDataIncorrect">Неправильно введены данные профиля!</string>
+	<string name="Error_401">Неправильно указан номер телефона или пароль. Пожалуйста, попробуйте ещё раз.</string>
+	<string name="Error_800">Неправильный номер карточки!</string>
+	<string name="Error_801">Карточка уже зарегистрирована!</string>
+	<string name="Error_804">Указанный номер телефона не зарегистрировано!</string>
+	<string name="Error_806">На указанный Вами номер уже зарегистрировано карточку клиента METRO. Пожалуйста, введите другой номер для продолжения регистрации.</string>
+	
+	<string name="Error_500">Ошибка при вводе номера карты (должно быть 22 символа).</string>
+	<string name="Error_503">Ошибка проверки checksum карты (ошибка при вводе).</string>
+	<string name="Error_805">Номер телефона владельца карты не совпадает с номером текущего пользователя.</string>
+	<string name="Error_902">Ошибка регистрации 902</string>
+	<string name="Error_903">Ошибка регистрации 903</string>
+	<string name="Error_905">Указанный номер телефона уже используется</string>	
+	
+	
+	<string name="Error_operationSuccess">Операция проведена успешно!</string>
+	
+	<string name="Error_operationUnSuccess">Неуспешное проведение операции!</string>
+	
+	<!-- inner_catalogs: week shares -->
+	<string name="all_catalogs">Все каталоги</string>
+	<string name="valid_until">действует до</string>
+	<string name="remains">осталось</string>
+	<string name="days1">день</string>
+	<string name="days2_4">дня</string>
+	<string name="days">дней</string>
+	
+	<!-- inner_catalog_gds -->
+	<string name="all_catalog_gds">Все товары из каталога</string>
+	<string name="filter">Фильтровать</string>
+	<string name="load_more">Загружаю...</string>
+	
+	<!-- discount_type -->
+	<string name="hit">hit</string>
+	<string name="regular">regular</string>
+	<string name="discount">discount</string>
+	<string name="action">action</string>	
+	
+	<!-- discount_title -->
+	<string name="hit_price">Хит-цена</string>
+	<string name="percent">-{0}%</string>
+	<string name="_price_of_">по цене</string>
+	<string name="_green">_green</string>
+	<string name="_red">_red</string>
+	<string name="_orange">_orange</string>
+	<string name="_short">_short</string>
+	<string name="_long">_long</string>
+		
+	
+	<!-- inner_gds_item -->
+	<string name="similar_gds">Похожие товары</string>
+	
+	<!-- filter -->
+	<string name="filter_title">Фильтр</string>
+	<string name="goods_title">товаров</string>
+	
+	<!-- inner_basket -->
+	<string name="my_shopping_list">Мой список покупок</string>
+	<string name="added">Добавлено</string>	
+	<string name="gds_title_1">товар</string>
+    <string name="gds_title_2">товара</string>	
+    <string name="gds_title_3">товаров</string>
+    <string name="on_sum">на сумму</string>	
+    <string name="empty_text">Вы ещё не добавили \nни одного товара \nв список покупок</string>	
+    <string name="add_first_gds">Добавить первый товар</string>	
+    <string name="gds_added">Товар добавлен</string>	
+    <string name="error_adding_gds">Возникла ошибка при добавлении товара</string>	
+    <string name="gds_deleted">Товар удалён</string>	
+    <string name="error_del_gds">Возникла ошибка при удалении товара из корзины</string>	
+    
+    <!-- inner_search -->
+    <string name="search_result">Результаты поиска</string>	
+    <string name="you_searched">Вы искали</string>	
+    <string name="results_found">По запросу найдено</string>	
+    <string name="search_result1">результат</string>
+    <string name="search_result2">результаты</string>
+    <string name="search_result3">результатов</string>	
+    <string name="repeat_search">Повторить поиск</string>	
+    
+    <!-- inner_my card -->
+	<string name="add_RegularCard">ДОБАВИТЬ ПОСТОЯННУЮ КАРТОЧКУ</string>
+	<string name="your_Region">Ваш регион:</string>
+	<string name="your_RegionNotSelected">Не выбран</string>
+	<string name="app_Rules"><u>Правила осуществления покупок</u></string>
+	<string name="app_RulesURL">https://registration.metro.ua/ru/ugodi-pro-vikoristannya/</string>
+	<string name="app_Exit">Выйти</string>
+	<string name="app_Loading">Загружаю данные...</string>
+	<string name="app_EnterData">Заполните, пожалуйста</string>
+	<string name="app_RulesSubHeader">Правила и условия</string>
+	<string name="app_PermanentSubHeader">Добавить номер постоянной карточки</string>
+	
+	<!-- get permanent card screen -->
+	<string name="app_getPermamentSubHeader">Получение постоянной карточки</string>
+	<string name="app_getPermamentText">Условия получения карты клиента в оптовых торговых центрах ООО «Метро Кэш энд Керри Украина» \n 1. ООО «Метро Кэш энд Керри Украина» осуществляет продажу товаров на оптовых условиях Клиентам при наличии личной карточки клиента МЕТРО. \n 2. Полномочный представитель Клиента ( "Представитель") может быть допущен в Магазин Метро только после предъявления действительной Карточки Клиента. Представитель может сопровождаться не более чем двумя лицами, для оказания помощи. \n 3. Карточку Клиента можно оформить двумя способами: \n a. Физические лица: \n i. Лично в Магазине Метро, на входе клиентов заполнив анкету и предоставив сотруднику Метро паспорт и идентификационный код. \n ii. Заполнить заявку онлайн указав все необходимые данные, которые будут востребованы системой. \n b. Юридические лица: \n i. Лично в Магазине Метро, на входе клиентов заполнив анкету и предоставив сотруднику Метро, учредительные документы компании, на имя которого проводится регистрация. \n ii. Заполнить заявку онлайн указав все необходимые данные, которые будут востребованы системой, и добавив сканкопию учредительных документов компании на имя которого проводится регистрация. \n 4. При выборе оформления карточки клиента непосредственно в Магазине, карта выдается сотрудником Метро, после завершения регистрации в то же время. \n 5. При выборе оформления карты онлайн, карточку Клиента необходимо забрать лично в выбранном при регистрации Магазине, на входе клиентов через 5 рабочих дней после осуществления регистрации. При себе иметь паспорт. \n 6. Клиент отвечает за то, что покупки в магазине Метро будут осуществлять только его уполномоченные представители, а также обязуется компенсировать Метро все потери и / или убытки, которые Метро может понести в результате ненадлежащего использования карточки Клиента или нарушений Общих Условий Покупки (включая нарушения со стороны представителей Клиента или лиц, их могут сопровождать). \n 7. Карточка Клиента остается собственностью метро. Клиент обязан немедленно сообщить об утере Карты клиента, а также об изменении своей деятельности или адреса.</string>
+	
+	<!-- Dialogs data -->
+	<string name="dialog_ExitTitle">Вы действительно хотите выйти?</string>
+	<string name="dialog_ExitLeft">Нет, остаться</string>
+	<string name="dialog_ExitRight">Да, выйти</string>
+	
+	<string name="dialog_AccessTitle">Нужен доступ</string>
+	<string name="dialog_AccessText">Для продолжения работы Приложения требует доступ к службе геолокации Вашего телефона</string>
+	<string name="dialog_AccessLeft">Разрешить</string>
+	<string name="dialog_AccessRight">Запретить</string>
+	
+	<string name="dialog_GeoErrorTitle">Внимание</string>
+	<string name="dialog_GeoErrorText">Возникла ошибка получения геокоординат. Попробуйте включить в настройках дополнительные опции определения координат.</string>
+	<string name="dialog_GeoErrorLeft">Настройки</string>
+	<string name="dialog_GeoErrorRight">Выйти</string>
+	<string name="dialog_Server503Title">Внимание</string>
+	<string name="dialog_Server503Text">Не удаётся установить соединение с сервером. Извините за временные неудобства.</string>
+	<string name="dialog_Server503Left">Попробовать ещё</string>
+	<string name="dialog_Server503Right">Выйти</string>
+	<string name="dialog_ServerUndefinedTitle">Внимание</string>
+	<string name="dialog_ServerUndefinedText">Возникла ошибка получения данных.</string>
+	<string name="dialog_ServerUndefinedLeft">Попробовать ещё</string>
+	<string name="dialog_ServerUndefinedRight">Выйти</string>
+	<string name="dialog_NoInternetTitle">Внимание</string>
+	<string name="dialog_NoInternetText">Невозможно открыть страницу из-за отсутствия связи с интернетом.</string>
+	<string name="show_bar_code">Просмотреть мою карточку.</string>
+		<string name="dialog_CardExpiredText">Срок действия временной карточки закончился. Пожалуйста, подключитесь к интернету и внесите данные Вашей постоянной карточки для дальнейшего использования приложения при покупках в магазине.</string>
+	
+	<string name="dialog_NoInternetLeft">Подключиться ещё раз.</string>
+	<string name="dialog_NoInternetSettings">Настройки</string>
+	<string name="dialog_NoInternetQuit">Выйти</string>
+	
+	<string name="dialog_PermanentAddedTitle">Спасибо!</string>
+	<string name="dialog_PermanentAddedText">Номер Вашей постоянной карточки добавлен успешно. Наслаждайтесь покупками с METRO!</string>
+	
+	<string name="dialog_TempCardTitle">Пожалуйста, обратите внимание!</string>
+	<string name="dialog_TempCardText">Вы используете номер временной карточки. Пожалуйста, внесите данные Вашей постоянной карточки до 1111 для дальнейшего использования приложения при покупках в магазине.</string>
+	<string name="dialog_TempCardButton"><u>Узнайте как получить постоянную карточку.</u></string>
+	<string name="dialog_TempCardLeft">Внести данные</string>
+	<string name="dialog_TempCardRight">Пропустить</string>
+	
+	<string name="dialog_TempCardFirstTitle">Поздравляем!</string>
+	<string name="dialog_TempCardFirstText">Вы можете осуществлять покупки в магазинах. Вам предоставлен временный номер карточки для осуществления покупок до 1111.\n
+	    		 Пожалуйста, введите номер Вашей постоянно карточки на протяжении 30 дней в разделе Моя карточка.\n
+	    		 Постоянную карточку Вы можете получить на входе клиентов в выбранном Вами торговом центре при регистрации. При себе необходимо иметь документ, который подтверждает личность.</string>
+	
+	<string name="dialog_TempCardExpired">Срок действия временной картчоки закончился. Пожалуйста, внесите данные Вашей постоянной карточки для дальнейшего использования приложения при покупках в магазине. </string>
+	<string name="dialog_TempCardExpiredBarCode">Постоянная карточка ожидает Вас в торговом центре на входе клиентов.</string>
+	
+	<!-- Maps data -->
+	<string name="map_subHeader">Карта магазинов</string>
+	<string name="map_closestStore">Ближайший магазин</string>
+	<string name="map_findButton">Найти</string>
+	<string name="map_listStore">Список магазинов по регионам</string>
+	<string name="map_selectedStore">Выбранный магазин</string>
+	<string name="map_traceRoute">Проложить маршрут</string>
+	
+	<string name="map_myPlace">Мое местоположение</string>
+	<string name="map_myDestination">Выбранный магазин METRO</string>
+	
+	<string name="map_noServicesTitle">Внимание!</string>
+	<string name="map_noServicesText">Для использования сервиса карт Вам необходимо обновить приложение GooglePlayStore на Вашем устройстве.</string>
+	<string name="map_noServicesButton">Да, понятно.</string>
+	
+	
+	<string-array name="_LoadData">
+    <item>Загружаю данные...</item> 
+	</string-array>
+	
+	<string-array name="_Month">
+    <item>Январь</item>
+    <item>Февраль</item>
+    <item>Март</item>
+    <item>Апрель</item>
+    <item>Май</item>
+    <item>Июнь</item>
+    <item>Июль</item>
+    <item>Август</item>
+    <item>Сентябрь</item>
+    <item>Октябрь</item>
+    <item>Ноябрь</item>
+    <item>Декабрь</item>
+	</string-array>
+	
+	<string name="app_rulesAgreement">Общие условия покупки в оптовых торговых центрах ООО «Метро Кэш энд Керри Украина» \n Метро этим устанавливает условия доступа Клиента в торговые центры "Метро Кэш энд Кэрри Україна" (далее "Магазины МЕТРО") и осуществление покупок у них. \n 1.  МЕТРО продает товары на оптовых условиях клиентам, которые являются юридическими лицами субъектами предпринимательской деятельности. \n 2.  Полномочный представитель Клиента ("Представитель") может быть допущен в Магазин Метро только после предъявления действительной Карточки Клиента. \n 3.  Представитель может сопровождаться не более чем двумя лицами, для предоставления помощи. \n 4.  Запрещается проносить к Магазинам Метро сумки, пакеты, контейнеры, а также оптическое, акустическое или другое записывающее оборудование представитель и сопровождающие лица несут все риски и ответственность, связанные с использованием средств транспортировки на территории Магазина Метро и на прилегающих территориях, включая зону парковки, тротуары, подъездные пути т.п. \n 5.  Клиент отвечает за то, что покупки в Магазинах Метро будут осуществлять лишь его уполномоченные представители, а также обязывается компенсировать Метро все потери и/или убытки, какие Метро может получить в результате неподобающего использования карточки Клиента или нарушений этих Общих Условий Покупки (включая нарушения со стороны представителей Клиента или лиц, которые их могут сопровождать). \n 6.  Карточка Клиента остается собственностью Метро. Клиент обязан немедленно сообщить о потере Карточки клиента, а также об изменении своей деятельности или адреса. \n 7.  Метро может прекратить свои отношения с Клиентом в любое время на свое усмотрение. Отношения с Клиентом прекращаются автоматически, если Клиент прекращает или не имеет больше права осуществлять хозяйственную деятельность. После прекращения отношений представителям Клиента в дальнейшем отказано в праве доступа к Магазинам Метро, а Клиент должен будет вернуть Метро Карточки Клиента. \n 8.  Если Представитель (или лицо, которое его сопровождает) откроет или повредит упаковку товара по любой причине, как преднамеренно, так и случайно, Клиент обязан возместить Метро стоимость соответствующей единицы товара ("Метро-единицы"). После возмещения товар перейдет к собственности Клиента. \n 9.  Путем оплаты стоимости товара Представитель подтверждает получение товара и отсутствие внешних дефектов. Товары могут быть возвращены или заменены, если они возвращаются в пределах установленного МЕТРО срока в оригинальной упаковке и сопровождаются документами, которые подтверждают факт покупки. \n 10.  В случае выявления недостатков товара на гарантии, МЕТРО (или сначала производитель или уполномоченный сервисный центр, в случае наличия соответствующих гарантий и согласно инструкций МЕТРО), осуществит исправление недостатков или замену товара, а в случае, если исправить недостатки или заменить товар невозможно, цена товара может быть уменьшена, или возвращено деньги за товар. \n 11.  Дети в возрасте до 6 лет не допускаются в Магазины Метро. \n 12.  В случае признания любого отдельного положения этих Общих Условий Покупки недействительным, остальные положения остаются действующими. Клиент соглашается получать информацию от МЕТРО по почте, через предложения "Метро почта", по факсу, телефоном и электронной почтой. Клиент может в любое время отказаться от получения такой информации. Составными частями этих "общих условий покупок" являются "Предостережения относительно защиты личных данных" и "Правила возвращения товаров в центрах оптовой торговли "МЕТРО Кэш энд Кэрри Украина". \n Предостережение относительно защиты личных данных \n 1.  Сбор, использование и/или обработка: \n ООО "МЕТРО Кэш энд Кэрри Украина" (дальше "МКК") собирает, обрабатывает и/илио использует информацию, которая предоставляется в Форме для выдачи карточки клиента (далее - "Личные данные") с целью администрирования и выполнения подписанных Вами из МКК Общих условий покупки в системе оптовых торговых центров "МЕТРО Кэш энд Кэрри Украина", общего и долгосрочного обслуживания клиентов, инд
+ивидуализации услуг для клиентов, а также стимулирования сбыта, рекламы, проведения исследований рынка и опросов (с помощью почты и электронных средств связи). \n 2.  Раскрытие данных для технической обработки: \n Поскольку МКК является частью "МЕТРО Групп", большой международной группы компаний, Ваши личные данные могут быть переданы к одному из информационных центров "Метро-групп Информейшн Текнолоджи ГмбХ", (далее - "Информационные центры") и могут обрабатываться в Информационных центрах для достижения целей, отмеченных в части 1. данные могут передаваться к странам с разными уровнями защиты данных; однако МКК и Информационные центры будут работать с соблюдением европейских правил защиты данных для обеспечения соответствующего уровня защиты личных данных. \n 3.  Доступ к Личным данным и их безопасность: \n доступ к вашим личным данным будет предоставлен лишь уполномоченным работникам для целей, отмеченных в части 1, а также для обеспечения безопасности и обработки информации. МКК использует умные технические и организационные средства для безопасности и конфиденциальности ваших личных данных, также при необходимости регулярно пересматривает и улучшает эти средства для отражения законодательных изменений и/или совершенствования технических возможностей. \n 4.  Правильность личных данных и внесения изменений к ним: \n Вы имеете право доступа к вашим личным данным и их пересмотру, а также возможность обращаться с просьбой относительно исправления, внесения изменений к вашим Личным данным, их удалению или блокированию. \n 5.  Отказ от предоставленного согласия: \n Вы можете в любое время отказаться от согласия, предоставленного Вами по этому положению. \n 6.  Информация о контактном лице МКК: \n если у вас будут возникать любые дальнейшие вопросы и/или желания относительно доступа к вашим личным данным или их пересмотру, представлению запросов, связанных с вашими Личными данными или отказов от вашего согласия, предоставленного по этому положению, пожалуйста, обращайтесь к нашему специалисту из обеспечения защиты данных по номеру горячей линии 8-800-501-40-10. \n 7.  Изменения к форме согласия: \n если МКК намеревается изменить эту форму согласия, МКК сообщит вам об этом. Если Вы не выразите отрицаний относительно такого изменения в течение двух недель по получении такого сообщения, изменение будет считаться принятым. МКК напомнит вам об особенном значении Ваших действий в начале такого периода, то есть, передавая вам сообщение об изменениях. \n Правила возвращения товаров в центрах оптовой торговли «МЕТРО Кэш энд Кэрри Украина» \n ООО "МЕТРО Кэш энд Кэрри Украина" осуществляет продажу товаров на оптовых условиях клиентам, которые являются субъектами предпринимательской деятельности (не частными лицами-потребителями). Возвращение товара может осуществляться лишь к тому центру оптовой торговли, где он был куплен. Обмен товара может быть осуществлен в любом торговом центре. \n Непродовольственные товары, без претензий относительно качества, могут быть возвращены в течение 14 дней со дня покупки, если: товар не использовался; возвращается в оригинальной упаковке; в полном комплекте; с неповрежденными пломбами; в таком же состоянии, в котором он был куплен; сопровождается оригинальным чеком и налоговой накладной. \n Пожалуйста, проверяйте качество и комплектность товара за кассовой зоной. Если дефект был выявлен к тому моменту, как клиент покинул магазин, товар обменивается непосредственно в магазине, после выхода клиента из магазина товар с претензией относительно дефектов "механическое повреждение" или "некомплект" не принимается. \n Дефектные товары, относительно которых установлен гарантийный срок, обслуживаются в гарантийных мастерских, адреса которых указаны в гарантийных талонах. Возвращение таких товаров возможно лишь: \n в течение гарантийного срока при условии наличия вывода гарантийной мастерской о том, что товар имеет дефект, устранение которого является нецелесообразным или невозможным; \n при наличии вывода независимой экспертизы о несоответствии товара показателям качества. \n Перечень товаров надлежащего качест
+ва, которые не подлежат обмену (возвращению): пухово-перьевая группа товаров, нижнее белье, постельное белье, печатные издания.
+	</string>
+	
+	
+</resources>

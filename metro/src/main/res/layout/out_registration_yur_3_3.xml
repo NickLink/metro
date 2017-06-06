@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_metro" />
+
+    <include
+        android:id="@+id/subheader_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/subheader_registration_yur" />
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/metro_gray" >
+
+        <LinearLayout
+            android:id="@+id/mainLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/reg_regError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="22dp"
+                android:text="@string/reg_regError"
+                android:textColor="@color/metro_red"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <RadioGroup
+                android:id="@+id/reg_yurRadioGroup1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/reg_yurGetProposal1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:text="@string/reg_yurGetProposal1"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/reg_yurGetProposal2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_weight="1"
+                    android:text="@string/reg_yurGetProposal2"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/reg_yurGetProposal2Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textViewRegion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/reg_yurRegion"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerRegion"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:entries="@array/_LoadData" />
+
+                    <TextView
+                        android:id="@+id/textViewCity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/reg_yurCity"
+                        android:textSize="14sp" />
+
+                    <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+
+                    <LinearLayout
+                        android:layout_width="0px"
+                        android:layout_height="0px"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true" />
+
+                    <EditText
+                        android:id="@+id/reg_CityEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_btn_white31"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="12dp"
+                        android:singleLine="true"
+                        android:textSize="14sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textViewStreetType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/reg_yurStreetType"
+                        android:textSize="14sp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerStreetType"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:entries="@array/_LoadData" />
+
+                    <TextView
+                        android:id="@+id/textViewStreet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/reg_yurStreet"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/reg_StreetEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_btn_white31"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="12dp"
+                        android:singleLine="true"
+                        android:textSize="14sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textViewHouse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/reg_yurHouse"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/reg_HouseEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_btn_white31"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="12dp"
+                        android:singleLine="true"
+                        android:textSize="14sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textViewFlat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/reg_yurFlat"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/reg_FlatEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_btn_white31"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="12dp"
+                        android:singleLine="true"
+                        android:textSize="14sp" >
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/textViewIndex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/reg_yurIndex"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/reg_IndexEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_btn_white31"
+                        android:gravity="left|center_vertical"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:paddingLeft="12dp"
+                        android:singleLine="true"
+                        android:textSize="14sp" >
+                    </EditText>
+                </LinearLayout>
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/reg_yurRadioGroup2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/reg_yurGetProposal3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:checked="true"
+                    android:layout_weight="1"
+                    android:text="@string/reg_yurGetProposal3"
+                    android:textSize="14sp" />
+
+                <RadioButton
+                    android:id="@+id/reg_yurGetProposal4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_weight="1"
+                    android:text="@string/reg_yurGetProposal4"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/reg_yurGetProposal4Layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textViewEmailAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/reg_yurEmailAddress"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/reg_EmailAddressEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="31dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_btn_white31"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="12dp"
+                        android:singleLine="true"
+                        android:textSize="14sp" >
+                    </EditText>
+                </LinearLayout>
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/getGoldStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:layout_marginTop="21dp"
+                android:text="@string/reg_yurGetGoldCard"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/reg_allFieldsMust"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:text="@string/reg_allFieldsMust"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/reg_regAgreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/reg_regAgreement"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="9dp" >
+
+                <Button
+                    android:id="@+id/reg_regCONTINUE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="43dp"
+                    android:background="@drawable/bg_btn_yellow"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:text="@string/reg_regGetRegister"
+                    android:textAllCaps="true"
+                    android:textColor="@color/metro_black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/reg_regThreeThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/reg_regThreeThree"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/metro_gray" >
+	
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_alignParentTop="true"
+	    android:layout_marginBottom="80dp"
+	    android:orientation="vertical" >
+	    
+	     <include
+		    android:id="@+id/subHeaderLayout"  
+		    android:layout_width="fill_parent"
+		    android:layout_height="70dp"			    
+		    layout="@layout/subheader_catalogs" />
+	
+	    <LinearLayout
+	        android:id="@+id/filterLayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/metro_black">
+	
+	        <TextView
+	            android:id="@+id/filterTextView"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:background="@drawable/bg_filter_arrow_down"
+	            android:padding="10dp"
+	            android:textColor="@android:color/white"
+	            android:textSize="24sp" />
+	
+	    </LinearLayout>
+	
+	    
+	    <ScrollView
+	        android:id="@+id/scrollView"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:fillViewport="true" >
+	        
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:background="@android:color/white"
+	            android:orientation="vertical" >
+	        
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:background="@color/metro_gray"
+			        android:orientation="horizontal"
+			        android:weightSum="2" >
+			
+			        <ImageView
+			            android:id="@+id/gdsImage"
+			            android:layout_width="0dp"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:scaleType="centerInside" />
+			
+			        <LinearLayout
+			            android:id="@+id/contentRelativeLayout"
+			            android:layout_width="0dp"
+			            android:layout_height="wrap_content"
+			            android:layout_weight="1"
+			            android:orientation="vertical"
+			            android:paddingBottom="20dp"
+			            android:paddingLeft="30dp"
+			            android:paddingRight="30dp"
+			            android:paddingTop="20dp" >
+			
+			            <TextView
+			                android:id="@+id/gdsTitle"
+			                android:layout_width="match_parent"
+			                android:layout_height="wrap_content"
+			                android:lineSpacingMultiplier="0.9"
+			                android:layout_marginBottom="7dp"
+			                android:textColor="#0b224b"
+			                android:textSize="26sp"
+			                android:textStyle="bold" />
+			
+			           <TextView
+			               android:id="@+id/gdsDiscount"
+			               android:layout_width="wrap_content"
+			               android:layout_height="wrap_content"
+			               android:layout_gravity="right"
+			               android:layout_marginTop="15dp"
+			               android:gravity="top|center"
+			               android:paddingTop="4dp"
+			               android:textColor="@android:color/white"
+			               android:textSize="16sp" />
+			
+			            <LinearLayout
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:layout_gravity="center"
+			                android:orientation="horizontal" >
+			
+			                <TextView
+			                    android:id="@+id/gdsPriceOldUah"
+			                    android:layout_width="wrap_content"
+			                    android:layout_height="wrap_content"
+			                    android:layout_marginRight="3dp"
+			                    android:background="@drawable/bg_strike_red"
+			                    android:textColor="#f72d31"
+			                    android:textSize="22sp" />
+			
+			                <TextView
+			                    android:id="@+id/gdsPriceOldCoins"
+			                    android:layout_width="wrap_content"
+			                    android:layout_height="wrap_content"
+			                    android:layout_marginRight="15dp"
+			                    android:layout_marginTop="-6dp"
+			                    android:background="@drawable/bg_strike_red"
+			                    android:textColor="#f72d31"
+			                    android:textSize="18sp" />
+			
+			                <TextView
+			                    android:id="@+id/gdsPriceUah"
+			                    android:layout_width="wrap_content"
+			                    android:layout_height="wrap_content"
+			                    android:layout_gravity="top"
+			                    android:layout_marginRight="3dp"
+			                    android:textColor="@color/metro_navy"
+			                    android:textSize="26sp" />
+			
+			                <TextView
+			                    android:id="@+id/gdsPriceCoins"
+			                    android:layout_width="wrap_content"
+			                    android:layout_height="wrap_content"
+			                    android:layout_marginRight="3dp"
+			                    android:layout_marginTop="-7dp"
+			                    android:textColor="@color/metro_navy"
+			                    android:textSize="20sp" />
+			
+			                <TextView
+			                    android:id="@+id/gdsPriceCurrency"
+			                    android:layout_width="wrap_content"
+			                    android:layout_height="wrap_content"
+			                    android:text="@string/uah"
+			                    android:textColor="@color/metro_navy"
+			                    android:textSize="24sp" />
+			            </LinearLayout>
+			
+			            <Button
+			                android:id="@+id/gdsAddButton"
+			                android:layout_width="wrap_content"
+			                android:layout_height="35dp"
+			                android:layout_marginTop="20dp"
+			                android:layout_gravity="center"
+			                android:background="@drawable/btn_selector"
+			                android:paddingLeft="25dp"
+			                android:paddingRight="25dp"
+			                android:text="@string/add_to_list"
+			                android:textColor="@color/btn_text_color"
+			                android:textSize="18sp" />
+			
+			        </LinearLayout>
+			        
+			    </LinearLayout>
+
+		        <WebView
+		            android:id="@+id/gdsDesc"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginBottom="15dp"
+		            android:layout_marginLeft="11dp"
+		            android:layout_marginRight="11dp"
+		            android:layout_marginTop="15dp" />
+		
+			    <LinearLayout
+			        android:id="@+id/similaGdsLayout"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:background="@color/metro_light_gray"
+			        android:orientation="vertical" 
+			        android:visibility="gone">
+			
+			        <View 
+			            android:layout_width="match_parent"
+			            android:layout_height="2dp"
+			            android:background="@color/metro_gray"/>
+			        <TextView
+			            android:id="@+id/similaGdsTextView"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:paddingBottom="7dp"
+			            android:paddingLeft="11dp"
+			            android:paddingTop="7dp"
+			            android:text="@string/similar_gds"
+			            android:textSize="30sp"
+			            android:textStyle="bold" />
+			
+			    <!--  <com.meetme.android.horizontallistview.HorizontalListView
+			            android:id="@+id/similarGdsListView"
+			            android:layout_width="match_parent"
+			            android:layout_height="wrap_content"/>-->
+			       
+			       <!--  <ua.metro.mobileapp.UI.GridViewScrollable
+			            android:id="@+id/similarGdsListView"
+			            android:layout_width="wrap_content"
+				        android:layout_height="fill_parent"
+				        android:numColumns="2"
+				        android:gravity="center"
+				        android:stretchMode="columnWidth" />-->
+
+			        <HorizontalScrollView
+			            android:id="@+id/horizontalScrollView1"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content" >
+
+			            <ua.metro.mobileapp.UI.LinearListView
+			                android:id="@+id/horizontalSGoodsLL"
+			                android:layout_width="wrap_content"
+			                android:layout_height="wrap_content"
+			                android:orientation="horizontal"/>
+			            
+			        </HorizontalScrollView>
+			        
+			 	</LinearLayout>
+			    
+			 </LinearLayout>
+	    
+	     </ScrollView>
+	
+	</LinearLayout>
+	<include
+	        android:id="@+id/bottomMenu"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        layout="@layout/bottom_menu" />
+	
+</RelativeLayout>

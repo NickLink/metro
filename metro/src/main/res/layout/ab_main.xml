@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/actionBarRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/metro_navy"
+    android:paddingLeft="11dp"
+    android:paddingRight="11dp" >
+	<!--android:layout_gravity="center"-->
+	<!--android:gravity="center_vertical"-->
+	<!--android:orientation="vertical"-->
+
+
+	<ImageButton
+	    android:id="@+id/feedback_menu_item"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true"
+	    android:layout_marginRight="11dp"
+	    android:background="@null"
+	    android:src="@drawable/btn_feedback_icon_normal" />
+	<!--android:clickable="false"-->
+
+	<ImageView
+	    android:id="@+id/metrologoImageView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:layout_toRightOf="@+id/feedback_menu_item"
+	    android:src="@drawable/metro_logo_rgb" />
+
+	<!--<LinearLayout-->
+	    <!--android:id="@+id/rightBtnLayout"-->
+	    <!--android:layout_width="wrap_content"-->
+	    <!--android:layout_height="wrap_content"-->
+	    <!--android:layout_alignParentRight="true"-->
+	    <!--android:layout_alignParentTop="false"-->
+	    <!--android:layout_centerVertical="true" >-->
+
+	    <!--<ImageButton-->
+	        <!--android:id="@+id/search_menu_item"-->
+	        <!--android:layout_width="wrap_content"-->
+	        <!--android:layout_height="wrap_content"-->
+	        <!--android:background="@null"-->
+	        <!--android:clickable="false"-->
+	        <!--android:src="@drawable/btn_search_normal" />-->
+
+	    <!--<View-->
+	        <!--android:layout_width="1dp"-->
+	        <!--android:layout_height="match_parent"-->
+	        <!--android:layout_marginLeft="12dp"-->
+	        <!--android:layout_marginRight="10dp"-->
+	        <!--android:background="#8698b9" />-->
+
+	    <!--<ImageButton-->
+	        <!--android:id="@+id/basket_menu_item"-->
+	        <!--android:layout_width="wrap_content"-->
+	        <!--android:layout_height="wrap_content"-->
+	        <!--android:background="@null"-->
+	        <!--android:clickable="false"-->
+	        <!--android:paddingRight="10dp"-->
+	        <!--android:src="@drawable/btn_cart_normal" />-->
+	<!--</LinearLayout>-->
+
+	<!--<TextView-->
+	    <!--android:id="@+id/basket_count"-->
+	    <!--android:layout_width="18dp"-->
+	    <!--android:layout_height="18dp"-->
+	    <!--android:layout_alignParentRight="true"-->
+	    <!--android:layout_alignTop="@+id/rightBtnLayout"-->
+	    <!--android:layout_marginTop="-3dp"-->
+	    <!--android:background="@drawable/bg_basket_count"-->
+	    <!--android:gravity="center"-->
+	    <!--android:text="0"-->
+	    <!--android:textAlignment="center"-->
+	    <!--android:textColor="@color/metro_black_text"-->
+	    <!--android:textSize="12sp"-->
+	    <!--android:textStyle="bold" />-->
+
+</RelativeLayout>

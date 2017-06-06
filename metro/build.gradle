@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            keyPassword 'p5m6md12'
+            storeFile file('D:/Dev/Android/Projects/metro/metro_key')
+            storePassword 'p5m6md12'
+            keyAlias 'ua.metro'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    compileOptions.encoding = 'windows-1251'
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "ua.metro.mobileapp"
+        minSdkVersion 16
+        targetSdkVersion 25
+        signingConfig signingConfigs.release
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+    useLibrary 'org.apache.http.legacy'
+    productFlavors {
+    }
+
+    dexOptions {
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+}
+
+dependencies {
+    compile project(':zBarScannerActivity')
+    compile 'com.facebook.android:facebook-android-sdk:4.22.0'
+    compile 'com.android.support:support-v4:25.0.0'
+    compile 'com.google.android.gms:play-services-maps:10.2.1'
+    compile 'com.google.android.gms:play-services-analytics:10.2.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile files('libs/core-3.2.1.jar')
+}
+
+//apply plugin: 'com.google.gms.google-services'

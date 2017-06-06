@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_metro" />
+
+    <include
+        android:id="@+id/header_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        layout="@layout/subheader_registration_yur" />
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/metro_gray"
+        android:fillViewport="true"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <LinearLayout
+            android:id="@+id/mainLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:id="@+id/reg_regError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="32dp"
+                android:text="@string/reg_regError"
+                android:textColor="@color/metro_red"
+                android:textSize="24sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/reg_regCompanyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/reg_regCompanyName"
+                android:textSize="20sp" />
+
+            <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <EditText
+                android:id="@+id/reg_regCompanyNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_btn_white31"
+                android:gravity="left|center_vertical"
+                android:maxLength="40"
+                android:paddingLeft="22dp"
+                android:paddingRight="22dp"
+                android:singleLine="true"
+                android:textSize="20sp" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/reg_regCompanySphere"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/reg_regCompanySphere"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerArea"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:entries="@array/_LoadData" />
+
+            <TextView
+                android:id="@+id/reg_regCompanyNapryam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/reg_regCompanyNapryam"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinnerDirection"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:entries="@array/_LoadData" />
+
+            <TextView
+                android:id="@+id/reg_regEDRPOU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/reg_regEDRPOU"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/reg_regEDRPOUEditText"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_btn_white31"
+                android:gravity="left|center_vertical"
+                android:inputType="number"
+                android:maxLength="12"
+                android:paddingLeft="22dp"
+                android:paddingRight="22dp"
+                android:singleLine="true"
+                android:textSize="20sp" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/reg_allFieldsMust"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/reg_allFieldsMust"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="18dp" >
+
+                <Button
+                    android:id="@+id/reg_regCONTINUE"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:background="@drawable/bg_btn_yellow"
+                    android:text="@string/reg_regCONTINUE"
+                    android:textAllCaps="true"
+                    android:textColor="@color/metro_black"
+                    android:paddingLeft="55dp"
+        			android:paddingRight="55dp"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/reg_regOneThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/reg_regOneThree"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

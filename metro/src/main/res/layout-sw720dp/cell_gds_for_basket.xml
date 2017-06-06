@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+	
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/metro_light_gray"
+	    android:minHeight="200dp"
+	    android:orientation="horizontal"
+	    android:weightSum="5" >
+	
+	        <ImageView
+	            android:id="@+id/gdsImage"
+	            android:layout_width="0dp"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:scaleType="centerInside" />
+	        
+	         <RelativeLayout
+	             android:layout_width="0dp"
+	             android:layout_height="wrap_content"
+	             android:layout_gravity="center_vertical"
+	             android:layout_weight="4"
+	             android:descendantFocusability="blocksDescendants"
+	             android:paddingBottom="10dp"
+		         android:paddingLeft="13dp"
+		         android:paddingTop="10dp" >
+	
+		        <LinearLayout
+		            android:id="@+id/contentRelativeLayout"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:orientation="vertical">
+		            
+		            <TextView
+		                android:id="@+id/gdsTitle"
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:ellipsize="end"
+		                android:maxLines="3"
+		                android:paddingRight="40dp"
+		                android:text="Лосось"
+		                android:textColor="@color/metro_navy"
+		                android:textSize="26sp" />
+		                     
+		            <LinearLayout
+		                android:layout_width="wrap_content"
+		                android:layout_height="wrap_content"
+		                android:layout_gravity="center"
+		                android:orientation="horizontal" >
+		            	
+		            	<TextView
+		            	    android:id="@+id/gdsPriceUah"
+		            	    android:layout_width="wrap_content"
+		            	    android:layout_height="wrap_content"
+		            	    android:layout_gravity="top"
+		            	    android:layout_marginRight="3dp"
+		            	    android:text="139"
+		            	    android:textColor="@color/metro_black"
+		            	    android:textSize="24sp" />
+		            	
+		            	<TextView
+		            	    android:id="@+id/gdsPriceCoins"
+		            	    android:layout_width="wrap_content"
+		            	    android:layout_height="wrap_content"
+		            	    android:layout_marginRight="3dp"
+		            	    android:layout_marginTop="-3dp"
+		            	    android:text="90"
+		            	    android:textColor="@color/metro_black"
+		            	    android:textSize="20sp" />
+		            	
+		            	<TextView
+		            	    android:id="@+id/gdsPriceCurrency"
+		            	    android:layout_width="wrap_content"
+		            	    android:layout_height="wrap_content"
+		            	    android:text="@string/uah"
+		            	    android:textColor="@color/metro_black"
+		            	    android:textSize="20sp" />
+		            
+		            </LinearLayout>
+	
+		             
+		        </LinearLayout>  
+		        
+		        <ImageButton
+		            android:id="@+id/gdsDelImageButton"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:background="@null"
+		            android:focusable="false"
+		            android:focusableInTouchMode="false"
+		            android:padding="11dp"
+		            android:src="@drawable/btn_dont_save_normal" />
+		        
+		    </RelativeLayout>
+	  
+	</LinearLayout>
+
+  	<ImageView
+  	    android:id="@+id/gdsExpiredImage"
+  	    android:layout_width="wrap_content"
+  	    android:layout_height="wrap_content"
+  	    android:layout_centerInParent="true"
+  	    android:background="#99ffffff"
+  	    android:scaleType="centerCrop"
+  	    android:src="@drawable/expired_cat_label" />
+
+ </RelativeLayout>

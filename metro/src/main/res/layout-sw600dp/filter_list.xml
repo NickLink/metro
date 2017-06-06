@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menuMainRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/metro_gray"
+    android:paddingBottom="24dp"
+    android:paddingTop="18dp" >
+
+    <LinearLayout
+        android:id="@+id/menuBtnRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical" >
+
+        <ImageButton android:id="@+id/filterButton" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_centerVertical="true" 
+            android:background="@drawable/btn_back_normal" 
+            android:rotation="180"/>
+
+        <TextView
+            android:id="@+id/bigTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:text="@string/filter_title"
+            android:textColor="@color/metro_black"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/smallTiltleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-15dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/goods_title"
+            android:textColor="@color/metro_black"
+            android:textSize="21sp" />
+
+    </LinearLayout>
+
+    <ExpandableListView 
+        android:id="@+id/filterExpandableListView" 
+        android:layout_width="match_parent" 
+        android:layout_height="match_parent" 
+        android:layout_alignParentBottom="true" 
+        android:layout_below="@+id/menuBtnRelativeLayout" 
+        android:drawSelectorOnTop="false">
+
+    </ExpandableListView>
+
+</RelativeLayout>

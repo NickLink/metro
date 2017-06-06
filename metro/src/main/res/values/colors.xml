@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="metro_navy">#1a3c7b</color>
+    <color name="metro_black">#081834</color>
+    <color name="metro_yellow">#ffe400</color>    
+    <color name="metro_gray">#ebeff0</color>
+    <color name="metro_light_gray">#f7f8f8</color>
+    <color name="metro_dark_gray">#aabbc9</color>
+    <color name="metro_green">#88cf38</color>
+    <color name="metro_red">#ee4335</color>
+    <color name="metro_transparent_black">#CC222222</color>
+    <color name="metro_transparent_preload">#77222222</color>
+    
+    <color name="metro_black_text">#021323</color>
+    <color name="metro_trace">#1a3c7b</color>
+    
+    <color name="metro_yellow_light">#FFF07F</color>
+    
+</resources>

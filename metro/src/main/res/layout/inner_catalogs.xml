@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+     <include
+	    android:id="@+id/subHeaderLayout"  
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    layout="@layout/subheader_main" />
+     
+      <RelativeLayout
+         android:id="@+id/emptyCatalogsLayout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"         
+         android:layout_marginBottom="60dp"
+         android:layout_below="@+id/subHeaderLayout"
+         android:background="@color/metro_gray"
+         android:visibility="gone" >
+
+         <ImageView
+             android:id="@+id/emptyCatalogImageView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:layout_gravity="center"
+             android:src="@drawable/no_catalog" />
+
+
+     </RelativeLayout>
+
+    <ListView
+        android:id="@+id/catalogsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/subHeaderLayout"
+        android:layout_marginBottom="60dp"
+        android:paddingLeft="10dp"
+    	android:paddingTop="10dp"
+    	android:background="@color/metro_gray"
+        android:divider="@color/metro_gray"
+        android:dividerHeight="5dp"
+        android:visibility="gone" >
+
+    </ListView>
+    
+    <include
+        android:id="@+id/bottomMenuLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottom_menu" />
+
+</RelativeLayout>

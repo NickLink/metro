@@ -1,0 +1,227 @@
+package ua.metro.mobileapp.adapters;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import ua.metro.mobileapp.FontCache;
+import ua.metro.mobileapp.Inner_CatalogGds;
+import ua.metro.mobileapp.MenuFilter;
+import ua.metro.mobileapp.R;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Typeface;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class FilterExpListAdapter extends BaseExpandableListAdapter {
+
+	        private ArrayList<Map<String, String>> mGroups;
+	        private HashMap<Integer,ArrayList<Map<String, String>>> mGhildren;
+
+	        private Context mContext;
+	        
+	        Typeface fontMedium;
+	        int idCatalog;
+	        int[] _counts;
+	        
+	        public FilterExpListAdapter (Context context, 
+	        		int idCatalog,
+	        		ArrayList<Map<String, String>> groups,
+	        		HashMap<Integer, ArrayList<Map<String, String>>> childData){
+	            
+	        	mContext = context;
+	            mGroups = groups;
+	            mGhildren = childData;
+	            this.idCatalog = idCatalog;
+	            
+	            fontMedium = FontCache.get("fonts/clearsansmedium.ttf", mContext);	
+	            
+		        _counts = new int[mGroups.size()];
+		        
+				for (int i = 0; i < mGroups.size(); i++) {
+		
+					if (mGhildren.containsKey(Integer.parseInt(mGroups.get(i).get(
+							"idGroup")))) {
+						_counts[i] = mGhildren.get(getParentId(i)).size();
+						Log.v("11", "ZZZ1= " + mGroups.get(i).get("idGroup") + " count=" +_counts[i]);
+					}
+				};
+	            
+	        }
+	        
+	        @Override
+	        public int getGroupCount() {
+	            return mGroups.size();
+	        }
+
+	        @Override
+	        public int getChildrenCount(int groupPosition) {
+	         	if ( mGhildren.containsKey(getParentId(groupPosition))){
+	        		return mGhildren.get(getParentId(groupPosition)).size();
+	        	}
+	        	else return 0;
+	        }
+
+	        @Override
+	        public Object getGroup(int groupPosition) {
+	            return mGroups.get(groupPosition);
+	        }
+	        
+	        public int getParentId(int groupPosition) {
+	        	if (mGhildren.containsKey(Integer.parseInt(mGroups.get(groupPosition).get("idGroup"))))
+	        		return Integer.parseInt(mGroups.get(groupPosition).get("idGroup"));
+	        	else
+	        		return 0;
+	        }
+
+	        @Override
+	        public Object getChild(int groupPosition, int childPosition) {
+	          	return mGhildren.get(getParentId(groupPosition)).get(childPosition);
+	        }
+
+	        @Override
+	        public long getGroupId(int groupPosition) {
+	            return groupPosition;
+	        }
+
+	        @Override
+	        public long getChildId(int groupPosition, int childPosition) {
+	            return childPosition;
+	        }
+
+	        @Override
+	        public boolean hasStableIds() {
+	            return true;
+	        }
+
+	        @Override
+	        public View getGroupView(final int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
+	        	
+	            if (convertView == null) {
+	                LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	                convertView = inflater.inflate(R.layout.filter_group, null);               
+	            }
+	            
+	            TextView textGroup = (TextView) convertView.findViewById(R.id.titleGroup);
+	            textGroup.setTypeface(fontMedium);
+	           
+	            /*int count = 0;
+	            if ( mGhildren.containsKey(Integer.parseInt(mGroups.get(groupPosition).get("idGroup")))){
+	            	count = mGhildren.get(getParentId(groupPosition)).size();
+	            }
+	            */
+	            
+	            textGroup.setText(mGroups.get(groupPosition).get("titleGroup"));//+" "+count);
+	            
+	            ImageView imageGroup = (ImageView) convertView.findViewById(R.id.imageGroup);
+	           
+	           // Log.v("LOG_TAG","ZZZ1 mGroups.get(groupPosition).get('idGroup') = "+mGroups.get(groupPosition).get("idGroup")
+	            //		+" count = "+_counts[groupPosition]);
+	            Log.v("123", "ZZZ1 groupPosition= " + groupPosition 
+	            		+ " name=" + mGroups.get(groupPosition).get("titleGroup")
+	            		+ " id=" + mGroups.get(groupPosition).get("idGroup") 
+	            		+ " children=" + _counts[groupPosition]);
+	            
+	            if(_counts[groupPosition]==0){ 
+	            	imageGroup.setVisibility(View.GONE);
+
+	            	textGroup.setOnClickListener(new View.OnClickListener() {
+			            @Override
+			            public void onClick(View view) {
+			            	
+			            	int index = 0; 
+			            	for(int j=0;j<mGroups.size();j++){
+			            		if(mGroups.get(j).get("titleGroup").equals(((TextView)view).getText())){
+			            			index = j;
+			            			break;
+			            		}
+			            	}
+			            	if(_counts[groupPosition]==0){
+			            		Intent intent = new Intent (mContext,Inner_CatalogGds.class);
+								intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP );
+								intent.putExtra("idCatalog", idCatalog);
+								intent.putExtra("idCategory", getParentId(index));
+								intent.putExtra("page",1);
+							    mContext.startActivity(intent);				       
+				            	MenuFilter.menuDialog.dismiss();
+			            	}
+			            	
+			            	Log.v("123", "ZZZ1 Clicked pos= " + groupPosition 
+			            			+ " cat num=" + mGroups.get(groupPosition).get("idGroup") 
+			            			+ " children=" + _counts[groupPosition] 
+			            			+ " name=" + ((TextView)view).getText()
+			            			+ " index=" + index);
+			            	
+			            	
+			            	/*
+			            	Intent intent = new Intent (mContext,Inner_CatalogGds.class);
+							intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP );
+							intent.putExtra("idCatalog", idCatalog);
+							intent.putExtra("idCategory", Integer.parseInt(mGroups.get(groupPosition).get("idGroup")));
+							intent.putExtra("page",1);
+							
+							
+						   
+						    mContext.startActivity(intent);
+			       
+			            	MenuFilter.menuDialog.dismiss();
+			            	*/
+			            }
+			        });
+
+	            }else
+	            	imageGroup.setVisibility(View.VISIBLE);
+	            
+	            if (isExpanded){
+	                //Изменяем что-нибудь, если текущая Group раскрыта
+	            	imageGroup.setImageResource(R.drawable.open);
+	            }else{
+	                 //Изменяем что-нибудь, если текущая Group скрыта
+	            	imageGroup.setImageResource(R.drawable.close);
+		        }
+	            return convertView;
+	        }
+	        
+	        @Override
+	        public View getChildView(final int groupPosition, final int childPosition, boolean isLastChild,
+	                                 View convertView, ViewGroup parent) {
+	            if (convertView == null) {
+	                LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	                convertView = inflater.inflate(R.layout.filter_child, null);
+	            }
+
+	            TextView textChild = (TextView) convertView.findViewById(R.id.titleSubSection);
+	            textChild.setTypeface(fontMedium);
+	   
+	            textChild.setText(mGhildren.get(getParentId(groupPosition)).get(childPosition).get("titleCategory"));
+	            
+	            textChild.setOnClickListener(new View.OnClickListener() {
+		            @Override
+		            public void onClick(View view) {
+		            	
+		            	Intent intent = new Intent (mContext,Inner_CatalogGds.class);
+    					intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP );
+    					intent.putExtra("idCatalog", idCatalog);
+    					intent.putExtra("idCategory", Integer.parseInt(mGhildren.get(getParentId(groupPosition)).get(childPosition).get("idCategory")));
+    					intent.putExtra("page",1);
+    				   
+    				    mContext.startActivity(intent);
+		       
+		            	MenuFilter.menuDialog.dismiss();
+		            }
+		        });
+
+	            return convertView;
+	        }
+
+	        @Override
+	        public boolean isChildSelectable(int groupPosition, int childPosition) {
+	            return true;
+	        }
+	    }

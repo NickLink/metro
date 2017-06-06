@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/metro_gray"
+    android:orientation="vertical"
+    android:paddingBottom="26dp" >
+  
+	    <RelativeLayout
+	        android:id="@+id/headerRelativeLayout"
+	        android:layout_width="match_parent"
+	        android:layout_height="65dp"
+	        android:background="@color/metro_light_gray" >
+	
+	      <ImageButton
+	          android:id="@+id/iconCloseImageButton"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:layout_alignParentRight="true"
+	          android:layout_centerVertical="true"
+	          android:layout_marginRight="20dp"
+	          android:background="@null"
+	          android:src="@drawable/btn_close_normal"
+	          android:visibility="gone" />
+	
+	      <TextView
+	          android:id="@+id/subTitleTextView"
+	          android:layout_width="wrap_content"
+	          android:layout_height="wrap_content"
+	          android:layout_alignParentLeft="true"
+	          android:layout_centerVertical="true"
+	          android:layout_marginLeft="20dp"
+	          android:textColor="@color/metro_black"
+	          android:textSize="28sp" />
+	
+	  	</RelativeLayout>
+	
+	    <TextView
+	        android:id="@+id/messageTextView"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/headerRelativeLayout"
+	        android:paddingBottom="2dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:paddingTop="13dp"
+		android:textSize="18sp" />
+	    
+	    <TextView
+	        android:id="@+id/buttonTextView"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/messageTextView"
+	        android:paddingBottom="9dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp"
+	        android:paddingTop="2dp"
+		android:textSize="18sp" />
+
+	    <LinearLayout
+	        android:id="@+id/selectionLL"
+	        android:layout_width="fill_parent"
+	        android:layout_height="45dp"
+	        android:layout_below="@+id/buttonTextView"
+	        android:layout_marginTop="34dp"
+	        android:orientation="horizontal"
+	        android:paddingLeft="25dp"
+	        android:paddingRight="25dp"
+	        android:weightSum="5" >
+
+	        <Button
+	            android:id="@+id/buttonLeft"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_marginLeft="20dp"
+	            android:layout_marginRight="30dp"
+	            android:layout_weight="3"
+	            android:background="@drawable/bg_btn_green_empty"
+	            android:textSize="18sp" />
+
+	        <Button
+	            android:id="@+id/buttonRight"
+	            android:layout_width="0dp"
+	            android:layout_height="fill_parent"
+	            android:layout_marginLeft="30dp"
+	            android:layout_marginRight="20dp"
+	            android:layout_weight="2"
+	            android:background="@drawable/bg_btn_red_empty"
+	            android:textSize="18sp" />
+
+	    </LinearLayout>
+
+</RelativeLayout>
+

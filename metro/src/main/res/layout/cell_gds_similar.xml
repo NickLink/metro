@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/metro_gray"
+    android:orientation="vertical"
+    android:paddingRight="3dp" >
+
+        <ImageView
+            android:id="@+id/gdsImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside" />
+
+        <LinearLayout
+            android:id="@+id/contentRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@color/metro_light_gray"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingLeft="11dp"
+            android:paddingRight="8dp"
+            android:paddingTop="9dp" >
+            
+            <TextView
+                android:id="@+id/gdsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="9dp"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:lines="2"
+                android:text="Лосось"
+                android:textColor="#0b224b"
+                android:textSize="15sp" />
+   
+            <!--  <TextView
+                 android:id="@+id/gdsDiscount"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="right"
+                 android:layout_marginBottom="7dp"
+                 android:layout_marginRight="4dp"
+                 android:background="@drawable/discount_green_short"
+                 android:gravity="top|center"
+                 android:text="@string/hit_price"
+                 android:textColor="@android:color/white"
+                 android:textSize="10sp" />-->
+             
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal" >
+            	
+            	<TextView
+            	    android:id="@+id/gdsPriceOldUah"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_marginRight="3dp"
+            	    android:background="@drawable/bg_strike_red"
+            	    android:text="209"
+            	    android:textColor="#f72d31"
+            	    android:textSize="14sp" />
+            	
+            	<TextView
+            	    android:id="@+id/gdsPriceOldCoins"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_marginRight="15dp"
+            	    android:layout_marginTop="-4dp"
+            	    android:background="@drawable/bg_strike_red"
+            	    android:text="90"
+            	    android:textColor="#f72d31"
+            	    android:textSize="10sp" />
+            	
+            	<TextView
+            	    android:id="@+id/gdsPriceUah"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_gravity="top"
+            	    android:layout_marginRight="3dp"
+            	    android:text="139"
+            	    android:textColor="@color/metro_navy"
+            	    android:textSize="18sp" />
+            	
+            	<TextView
+            	    android:id="@+id/gdsPriceCoins"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:layout_marginRight="3dp"
+            	    android:layout_marginTop="-5dp"
+            	    android:text="90"
+            	    android:textColor="@color/metro_navy"
+            	    android:textSize="12sp" />
+            	
+            	<TextView
+            	    android:id="@+id/gdsPriceCurrency"
+            	    android:layout_width="wrap_content"
+            	    android:layout_height="wrap_content"
+            	    android:text="@string/uah"
+            	    android:textColor="@color/metro_navy"
+            	    android:textSize="16sp" />
+            
+            </LinearLayout>
+            
+           	<Button
+           	    android:id="@+id/gdsAddButton"
+           	    android:layout_width="wrap_content"
+           	    android:layout_height="33dp"
+           	    android:layout_marginTop="10dp"
+           	    android:layout_gravity="center"
+           	   	android:background="@drawable/btn_selector"
+           	    android:paddingLeft="17dp"
+           	    android:paddingRight="17dp"
+           	    android:text="@string/add_to_list"
+           	    android:textSize="12sp" 
+           	    android:focusable="false"
+           	    android:textColor="@color/btn_text_color"/>
+             
+        </LinearLayout>  
+  
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    
+      <include
+	    android:id="@+id/header_layout"  
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"			    
+	    layout="@layout/header_metro" />
+
+      <include
+	    android:id="@+id/subheader_layout"  
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"			    
+	    layout="@layout/subheader_auth" />
+
+      <RelativeLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@color/metro_gray"
+          android:paddingLeft="40dp"
+          android:paddingRight="40dp" >
+
+          <LinearLayout
+              android:id="@+id/content1LinearLayout"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"              
+              android:orientation="vertical" >
+
+              <TextView
+                  android:id="@+id/confirmTextView"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_marginBottom="24dp"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:layout_marginTop="34dp"
+                  android:gravity="center"
+                  android:lineSpacingMultiplier="0.9"
+                  android:text="@string/login_cardnotexisttitle"
+                  android:textColor="@color/metro_black"
+                  android:textSize="24sp" />
+
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:layout_gravity="center_horizontal"
+                  android:layout_marginLeft="200dp"
+                  android:layout_marginRight="200dp"
+                  android:background="@drawable/bg_line" />
+
+              <EditText
+                  android:id="@+id/cardNumberEditText"
+                  android:layout_width="match_parent"
+                  android:layout_height="45dp"
+                  android:layout_marginLeft="20dp"
+                  android:layout_marginRight="20dp"
+                  android:layout_marginTop="27dp"
+                  android:background="@drawable/bg_btn_white"
+                  android:hint="@string/login_cardnotexisthint"
+                  android:inputType="number"
+                  android:maxLength="22"
+                  android:paddingLeft="56dp"
+                  android:paddingRight="56dp"
+                  android:textColorHint="#aabbc9"
+                  android:textSize="27sp" />
+
+              <Button
+                  android:id="@+id/confirmButton"
+                  android:layout_width="wrap_content"
+                  android:layout_height="60dp"
+                  android:layout_gravity="center"
+                  android:layout_marginBottom="34dp"
+                  android:layout_marginTop="30dp"
+                  android:background="@drawable/bg_btn_yellow"
+                  android:paddingLeft="35dp"
+                  android:paddingRight="35dp"
+                  android:text="@string/login_confirmBig"
+                  android:textAllCaps="true"
+                  android:textColor="@color/metro_black"
+                  android:textSize="27sp" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:id="@+id/content2LinearLayout"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:orientation="vertical" >
+
+              <TextView
+                  android:id="@+id/quetionTextView"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:gravity="center"
+                  android:lineSpacingMultiplier="0.9"
+                  android:text="@string/login_havequestionaboutautorization"
+                  android:textColor="@color/metro_black"
+                  android:textSize="24sp" />
+
+              <Button
+                  android:id="@+id/questionButton"
+                  android:layout_width="wrap_content"
+                  android:layout_height="45dp"
+                  android:layout_gravity="center"
+                  android:layout_marginBottom="38dp"
+                  android:layout_marginTop="18dp"
+                  android:background="@drawable/bg_btn_yellow"
+                  android:paddingLeft="35dp"
+                  android:paddingRight="35dp"
+                  android:text="@string/login_sendquetion"
+                  android:textAllCaps="true"
+                  android:textColor="@color/metro_black"
+                  android:textSize="18sp" />
+          </LinearLayout>
+
+      </RelativeLayout>
+      
+</LinearLayout>

@@ -1,0 +1,56 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+	  <style name="navbar_button">
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:button">@null</item>
+	    <item name="android:background">@drawable/navbar_backgroundselector</item>
+	    <item name="android:gravity">center_horizontal</item>
+	    <item name="android:layout_weight">1</item>
+	    <item name="android:textSize">12dp</item>
+	  </style>
+	  
+	  <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+	</style>
+	
+	  <!-- Animation for dialog box -->
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+    
+    <style name="spinner_style">
+	    <item name="android:background">@drawable/reg_spinner</item>
+	    <item name="android:paddingLeft">12dp</item>
+	    <item name="android:paddingRight">12dp</item>
+	    <item name="android:paddingTop">2dp</item>
+	    <item name="android:paddingBottom">2dp</item>
+	    <item name="android:popupBackground">@drawable/bg_spinner_dropdown</item>
+	    <item name="android:dropDownListViewStyle">@style/item_spinner_style</item>
+	</style>
+	
+    <style name="item_spinner_style" parent="android:style/Widget.ListView.DropDown">
+    <item name="android:divider">@color/metro_gray</item>
+    <item name="android:height">0dp</item>
+    <item name="android:dividerHeight">0dp</item>
+</style>
+
+</resources>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reg_CardOwner_4RL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="26dp" >
+
+    <TextView
+        android:id="@+id/reg_yurCardOwner4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:text="@string/reg_yurCardOwner4"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/reg_yurCardOpenLL4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="18dp"
+        android:orientation="horizontal"
+        android:paddingTop="4dp" >
+
+        <TextView
+            android:id="@+id/reg_yurCardOpen4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reg_yurCardClose"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/reg_yurCardOpenImageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@drawable/spinner_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/reg_CardOwner_4LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reg_yurCardOwner4"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/reg_iRegisterAs4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="28dp"
+            android:text="@string/reg_regPrizvische"
+            android:textSize="20sp" />
+
+        <!-- Dummy item to prevent AutoCompleteTextView from receiving focus -->
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <EditText
+            android:id="@+id/reg_regPrizvischeEditText4"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_btn_white31"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:singleLine="true"
+            android:textSize="20sp" >
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/reg_regName4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="26dp"
+            android:text="@string/reg_regName"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/reg_regNameEditText4"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_btn_white31"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:singleLine="true"
+            android:textSize="20sp" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/reg_regPobatkovi4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="26dp"
+            android:text="@string/reg_regPobatkovi"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/reg_regPobatkoviEditText4"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_btn_white31"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:singleLine="true"
+            android:textSize="20sp" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/reg_regMobPhone4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="26dp"
+            android:text="@string/reg_regMobPhone"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/reg_regMobPhoneEditText4"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_btn_white31"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:hint="@string/login_phoneeditHint"
+            android:inputType="number"
+            android:singleLine="true"
+            android:maxLength="12"
+            android:textSize="20sp" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/reg_regEmail4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="26dp"
+            android:text="@string/reg_regEmail"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/reg_regEmailEditText4"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_btn_white31"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="22dp"
+            android:paddingRight="22dp"
+            android:singleLine="true"
+            android:textSize="20sp" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/reg_yurCardOwnerDelete4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/reg_yurCardOwnerDelete"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

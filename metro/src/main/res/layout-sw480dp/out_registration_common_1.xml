@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    
+      <include
+	    android:id="@+id/header_layout"  
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"			    
+	    layout="@layout/header_metro" />
+      
+      <include
+	    android:id="@+id/header_layout"  
+	    android:layout_width="fill_parent"
+	    android:layout_height="60dp"			    
+	    layout="@layout/subheader_registration" />
+     
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/metro_gray"
+          android:paddingLeft="40dp"
+          android:paddingRight="40dp" >
+
+	     <LinearLayout
+	         android:id="@+id/mainLinearLayout"
+	         android:layout_width="fill_parent"
+	         android:layout_height="wrap_content"
+	         android:layout_alignParentTop="true"
+	         android:orientation="vertical" >
+
+	         <TextView
+	             android:id="@+id/reg_iRegisterAs"
+	             android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:layout_gravity="center"
+	             android:layout_marginTop="60dp"
+	             android:text="@string/reg_iRegisterAs"
+	             android:textSize="20sp" />
+	         
+	         <Button
+	             android:id="@+id/reg_fizOsoba"
+	             android:layout_width="fill_parent"
+	             android:layout_height="50dp"
+	             android:layout_gravity="center"
+	             android:layout_marginTop="20dp"
+	             android:background="@drawable/bg_btn_yellow"
+	             android:text="@string/reg_FizOsoba"
+	             android:textAllCaps="true"
+	             android:textColor="@color/metro_black"
+	             android:textSize="20sp" />
+	         
+	         <Button
+	             android:id="@+id/reg_UrOsobaSPD"
+	             android:layout_width="fill_parent"
+	             android:layout_height="50dp"
+	             android:layout_gravity="center"
+	             android:layout_marginTop="32dp"
+	             android:background="@drawable/bg_btn_navy"
+	             android:text="@string/reg_UrOsobaSPD"
+	             android:textAllCaps="true"
+	             android:textColor="@android:color/white"
+	             android:textSize="20sp" />
+	         
+	    </LinearLayout>
+	    
+	  </RelativeLayout>
+      
+</LinearLayout>   

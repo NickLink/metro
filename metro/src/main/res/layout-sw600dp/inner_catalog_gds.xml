@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <include
+         android:id="@+id/subHeaderLayout"
+         android:layout_width="match_parent"
+         android:layout_height="65dp"
+         android:layout_alignParentTop="true"
+         layout="@layout/subheader_catalogs" />
+     
+     <RelativeLayout
+         android:id="@+id/emptyCatalogsLayout"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"         
+         android:layout_marginBottom="60dp"
+         android:layout_below="@+id/subHeaderLayout"
+         android:background="@color/metro_gray"
+         android:visibility="gone" >
+
+         <ImageView
+             android:id="@+id/emptyCatalogImageView"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_centerInParent="true"
+             android:layout_gravity="center"
+             android:src="@drawable/no_catalog" />
+
+
+     </RelativeLayout>
+
+     <RelativeLayout
+         android:id="@+id/mainLayout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="60dp"
+         android:layout_below="@+id/subHeaderLayout"
+         android:visibility="gone" >
+         
+	     <LinearLayout
+	         android:id="@+id/topMenuLinearLayout"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:orientation="horizontal"
+	         android:weightSum="8" >
+	
+	         <Button
+	             android:id="@+id/allGdsButton"
+	             android:layout_width="match_parent"
+	             android:layout_height="match_parent"
+	             android:layout_weight="3"
+	             android:background="@color/metro_black"
+	             android:paddingBottom="5dp"
+	             android:paddingLeft="5dp"
+	             android:paddingRight="5dp"
+	             android:paddingTop="5dp"
+	             android:text="@string/all_catalog_gds"
+	             android:textColor="@android:color/white"
+	             android:textSize="22sp" />
+	
+	         <Button
+	             android:id="@+id/filterButton"
+	             android:layout_width="match_parent"
+	             android:layout_height="match_parent"
+	             android:layout_weight="5"
+	             android:background="@color/metro_yellow"
+	             android:paddingBottom="5dp"
+	             android:paddingLeft="5dp"
+	             android:paddingRight="5dp"
+	             android:paddingTop="5dp"
+	             android:text="@string/filter"
+	             android:textColor="@color/metro_black"
+	             android:textSize="22sp" />
+	
+	     </LinearLayout>
+	
+	    <ListView
+	        android:id="@+id/catalogGdsListView"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/topMenuLinearLayout"
+	        android:background="@color/metro_gray"
+	        android:divider="@color/metro_gray"
+	        android:dividerHeight="3dp" >
+	
+	    </ListView>
+	</RelativeLayout>
+    
+    <include
+        android:id="@+id/bottomMenuLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottom_menu" />
+
+</RelativeLayout>

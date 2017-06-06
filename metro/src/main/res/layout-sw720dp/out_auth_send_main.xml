@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+    
+      <include
+	    android:id="@+id/header_layout"  
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"			    
+	    layout="@layout/header_metro" />
+
+      <include
+	    android:id="@+id/sub_header_layout"  
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"			    
+	    layout="@layout/subheader_auth" />
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent" 
+          android:background="@color/metro_gray">
+
+          <android.support.v4.view.ViewPager
+            android:id="@+id/authsend_Pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+		</android.support.v4.view.ViewPager>
+
+      </RelativeLayout>
+      
+</LinearLayout>

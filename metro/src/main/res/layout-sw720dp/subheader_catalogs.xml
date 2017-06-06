@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/metro_light_gray" >
+
+      <ImageButton
+          android:id="@+id/iconBackImageButton"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_marginLeft="20dp"
+          android:layout_marginRight="20dp"
+          android:layout_centerVertical="true"
+          android:background="@null"
+          android:src="@drawable/btn_back_normal" />
+
+      <TextView
+          android:id="@+id/subTitleTextView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_toRightOf="@+id/iconBackImageButton"
+          android:gravity="center_vertical"
+          android:textColor="@color/metro_black"
+          android:textSize="30sp" />
+
+      <LinearLayout
+          android:id="@+id/remainsLayout"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_marginLeft="24dp"
+          android:layout_marginRight="16dp"
+          android:layout_weight="1"
+          android:gravity="center_horizontal"
+          android:orientation="vertical"
+          android:paddingTop="3dp" >
+
+          <TextView
+              android:id="@+id/labelRemainsTextView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/remains"
+              android:textSize="12sp" />
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
+                 
+              <ProgressBar
+                  android:id="@+id/daysUntilprogressBar"
+                  android:layout_centerInParent="true"
+		  style="?android:attr/progressBarStyleHorizontal"
+		  android:layout_width="45dp"
+		  android:layout_height="45dp"
+		  android:indeterminate="false"
+		  android:progressDrawable="@drawable/circular_background" />
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical" >
+
+                  <TextView
+                      android:id="@+id/countDaysLeftTextView"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_marginTop="2dp"
+                      android:gravity="center"
+                      android:textSize="18sp" />
+
+                  <TextView
+                      android:id="@+id/labelDaysTextView"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_marginTop="-7dp"
+                      android:gravity="center"
+                      android:textSize="12sp" />
+
+              </LinearLayout>
+
+          </RelativeLayout>
+
+      </LinearLayout>
+
+  </RelativeLayout>
